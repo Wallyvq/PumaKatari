@@ -27,7 +27,5 @@ namespace PumaKatari_Consola {
             "\nSueldo: "+this.sueldo
          );
       }
-        
-      
    }
 }
