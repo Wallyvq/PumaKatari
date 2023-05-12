@@ -1,7 +1,7 @@
 # PumaKatari
 Proyecto de Lab-121
 
-###EL PUMA KATARI DE LA PAZ
+### EL PUMA KATARI DE LA PAZ
 (Noticias pasadas) El alcalde Luis Revilla informó este martes, de manera oficial, que la fecha de inicio de
 operaciones de los buses Puma Katari es el lunes 24 de febrero en dos rutas que cubrirán los macrodistritos
 San Antonio y Cotahuma, mientras que la tercera ruta iniciará el lunes 3 de marzo en la zona Sur. Los tres
@@ -22,12 +22,12 @@ tres lo harán en los siguientes tres meses, informó el alcalde Luis Revilla.
 Se quiere controlar las diferentes líneas del Bus Puma Katari de la ciudad de La Paz, mediante Programacion
 Orientada a Objetos.
 
-###PROBLEMAS A RESOLVER:
-• Registrar la información de las diferentes líneas o rutas
-• Registrar los buses que trabajan en las líneas
-• Registrar a los conductores y el personal de apoyo de cada bus
-• Registrar por fechas los recorridos efectuados por cada Bus
-• Listar a los buses que están asignados a la Linea X
-• Cuál es el trayecto de la ruta X?
-• Emitir un listado del ingreso que ocurrió durante la jornada
+### PROBLEMAS A RESOLVER:
+• Registrar la información de las diferentes líneas o rutas 
+• Registrar los buses que trabajan en las líneas 
+• Registrar a los conductores y el personal de apoyo de cada bus 
+• Registrar por fechas los recorridos efectuados por cada Bus 
+• Listar a los buses que están asignados a la Linea X 
+• Cuál es el trayecto de la ruta X? 
+• Emitir un listado del ingreso que ocurrió durante la jornada 
 • Emitir un reporte de la ruta que tiene la mayor cantidad de pasajeros
