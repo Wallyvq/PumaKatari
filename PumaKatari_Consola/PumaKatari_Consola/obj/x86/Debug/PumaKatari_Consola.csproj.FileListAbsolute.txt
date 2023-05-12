@@ -1,0 +1,2 @@
+/home/cris/programing/PumaKatari_Lab121/PumaKatari_Consola/PumaKatari_Consola/obj/x86/Debug/PumaKatari_Consola.csproj.AssemblyReference.cache
+/home/cris/programing/PumaKatari_Lab121/PumaKatari_Consola/PumaKatari_Consola/obj/x86/Debug/PumaKatari_Consola.csproj.CoreCompileInputs.cache

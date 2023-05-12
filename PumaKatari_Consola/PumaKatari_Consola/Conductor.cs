@@ -18,9 +18,9 @@ namespace PumaKatari_Consola {
       public double Sueldo { get => sueldo; set => sueldo = value; }
         
       // Metodos
-      public void mostrarConductor(){
+      public void mostConductor(){
          Console.WriteLine("Conductor: ");
-         this.mostrarPersona();
+         this.mostPersona();
          Console.WriteLine(
             "Id: "+this.id+
             "\nHorario: "+this.horario+

@@ -18,9 +18,9 @@ namespace PumaKatari_Consola {
       public int IdAsiento1 { get => idAsiento; set => idAsiento = value; }
 
       // Metodos
-      public void mostrarPasajero(){
+      public void mostPasajero(){
          Console.WriteLine("Pasajero: ");
-         this.mostrarPersona();
+         this.mostPersona();
          Console.WriteLine(
             "Rango Edad: "+this.rangoEdad+
             "\nId Asiento: "+this.idAsiento+

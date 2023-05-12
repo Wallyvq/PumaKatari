@@ -35,8 +35,8 @@
     <Compile Include="Bus.cs" />
     <Compile Include="Pasaje.cs" />
     <Compile Include="Ruta.cs" />
-    <Compile Include="Paradas.cs" />
     <Compile Include="Linea.cs" />
+    <Compile Include="Parada.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
