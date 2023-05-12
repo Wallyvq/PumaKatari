@@ -4,7 +4,6 @@ namespace PumaKatari_Consola {
       private int id;
       private string horario;
       private double sueldo;
-
       // Constructor
       public Conductor(string nombre, int edad, int ci,  int id, string horario, double sueldo) 
       : base(nombre, edad, ci) {

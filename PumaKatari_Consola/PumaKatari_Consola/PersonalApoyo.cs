@@ -28,6 +28,7 @@ namespace PumaKatari_Consola {
             "\nHorario: "+this.horario+
             "\nSueldo: "+this.sueldo
          );
+         
       }
    }
 }

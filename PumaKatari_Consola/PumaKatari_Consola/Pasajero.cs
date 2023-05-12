@@ -25,7 +25,8 @@ namespace PumaKatari_Consola {
             "Rango Edad: "+this.rangoEdad+
             "\nId Asiento: "+this.idAsiento+
             "\nTipo Pasajero: "+this.tipoPasajero
-         );
+         ); 
+         
       }
       
    }

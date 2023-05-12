@@ -19,5 +19,6 @@ namespace PumaKatari_Consola {
             "\nCI: "+this.ci
          );
       }
+      
    }
 }
