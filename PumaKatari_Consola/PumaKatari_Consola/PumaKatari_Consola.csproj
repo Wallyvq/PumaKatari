@@ -28,6 +28,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Principal.cs" />
+    <Compile Include="Persona.cs" />
+    <Compile Include="Pasajero.cs" />
+    <Compile Include="Conductor.cs" />
+    <Compile Include="PersonalApoyo.cs" />
+    <Compile Include="Bus.cs" />
+    <Compile Include="Pasaje.cs" />
+    <Compile Include="Ruta.cs" />
+    <Compile Include="Paradas.cs" />
+    <Compile Include="Linea.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
