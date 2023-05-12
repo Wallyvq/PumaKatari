@@ -1,3 +1,3 @@
-#Este es el Proyecto con Interfaz Grafica
+# Este es el Proyecto con Interfaz Grafica
 
-###Puma Katari
+### Puma Katari
