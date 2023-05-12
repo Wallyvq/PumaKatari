@@ -24,10 +24,18 @@ Orientada a Objetos.
 
 ### PROBLEMAS A RESOLVER:
 • Registrar la información de las diferentes líneas o rutas 
+
 • Registrar los buses que trabajan en las líneas 
+
 • Registrar a los conductores y el personal de apoyo de cada bus 
+
 • Registrar por fechas los recorridos efectuados por cada Bus 
+
 • Listar a los buses que están asignados a la Linea X 
+
 • Cuál es el trayecto de la ruta X? 
+
 • Emitir un listado del ingreso que ocurrió durante la jornada 
+
 • Emitir un reporte de la ruta que tiene la mayor cantidad de pasajeros
+
