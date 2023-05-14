@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{305E8AEA-9B54-4CD7-B01E-334BF153AB1B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PumaKatariConsola/Principal.cs">
+    <Files>
+      <File FileName="PumaKatariConsola/Principal.cs" Line="11" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PumaKatariConsola" expanded="True">
+            <Node name="PumaKatariConsola" expanded="True">
+              <Node name="Principal.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.PumaKatariConsola FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

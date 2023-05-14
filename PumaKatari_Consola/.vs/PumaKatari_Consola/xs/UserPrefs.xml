@@ -5,13 +5,15 @@
       <File FileName="PumaKatari_Consola/Pasaje.cs" Line="1" Column="1" />
       <File FileName="PumaKatari_Consola/Ruta.cs" Line="1" Column="1" />
       <File FileName="PumaKatari_Consola/Linea.cs" Line="1" Column="1" />
-      <File FileName="PumaKatari_Consola/Parada.cs" Line="20" Column="1" />
+      <File FileName="PumaKatari_Consola/Parada.cs" Line="19" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PumaKatari_Consola" expanded="True">
-            <Node name="PumaKatari_Consola" expanded="True" />
+            <Node name="PumaKatari_Consola" expanded="True">
+              <Node name="Parada.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
