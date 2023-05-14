@@ -12,7 +12,6 @@ namespace PumaKatari_Consola {
          this.horario = horario;
          this.sueldo = sueldo;
       }
-
       // Setters y Getters
 
       public int Id { get => id; set => id = value; }
@@ -21,13 +20,9 @@ namespace PumaKatari_Consola {
 
       // Metodos
       public void mostPersApoyo(){
-         Console.WriteLine("Personal Apoyo");
+         Console.WriteLine("\t\t- Personal Apoyo");
          this.mostPersona();
-         Console.WriteLine(
-            "Id: "+this.id+
-            "\nHorario: "+this.horario+
-            "\nSueldo: "+this.sueldo
-         );
+         Console.WriteLine( "\t\t\t- Id: "+this.id+ "\n\t\t\t- Horario: "+this.horario+ "\n\t\t\t- Sueldo: "+this.sueldo+"\n" );
          
       }
    }

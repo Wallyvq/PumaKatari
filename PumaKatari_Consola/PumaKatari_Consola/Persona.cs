@@ -12,13 +12,9 @@ namespace PumaKatari_Consola {
       public string Nombre { get => nombre; set => nombre = value; }
       public int Edad {get => edad; set => edad = value;}
       public int Ci {get => ci; set => ci = value;}
-      public void mostPersona(){
-         Console.WriteLine(
-            "Nombre: "+this.nombre+
-            "\nEdad: "+this.edad+
-            "\nCI: "+this.ci
-         );
-      }
+
+      // Metodos
+      public void mostPersona(){ Console.WriteLine( "\t\t\t- Nombre: "+this.nombre+"\n\t\t\t- Edad: "+this.edad+ "\n\t\t\t- CI: "+this.ci ); }
       
    }
 }

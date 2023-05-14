@@ -4,10 +4,10 @@ namespace PumaKatari_Consola {
       private int nroLineas, nroRutas;
       private string nomLinea;
       private Ruta[] ruta = new Ruta[7];
-      public Linea(int nroLineas, int nroRutas, string nomLinea) {
-         this.nroLineas = nroLineas;
-         this.nroRutas = nroRutas;
-         this.nomLinea = nomLinea;
+      public Linea(/* int nroLineas, int nroRutas, string nomLinea */) {
+         this.nroLineas = 0;
+         this.nroRutas = 0;
+         this.nomLinea = "Linea x";
       }
 
       // Getters y Setters
@@ -25,5 +25,7 @@ namespace PumaKatari_Consola {
          );
          for (int i = 0; i < this.nroRutas; i++) { ruta[i].mostRuta(); }
       }
+
+      public void adiRuta(Ruta x){ ruta[this.nroRutas] = x; this.nroRutas++; }
    }
 }

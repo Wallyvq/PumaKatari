@@ -13,11 +13,6 @@ namespace PumaKatari_Consola {
       public int NroParada { get => nroParada; set => nroParada = value; }
       
       // Metodos
-      public void mostParada(){
-         Console.WriteLine(
-            "Nro Parada: "+this.nroParada+
-            "\nUbicacion: "+this.ubicacion
-         );
-      }
+      public void mostParada(){ Console.Write( "\t\t Nro Parada: "+this.nroParada+"\t"+ "| Ubicacion: "+this.ubicacion+"\n" ); }
    }
 }

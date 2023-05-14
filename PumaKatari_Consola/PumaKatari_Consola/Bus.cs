@@ -20,11 +20,7 @@ namespace PumaKatari_Consola {
       
       // Metodos
       public void mostBus(){
-         Console.WriteLine(
-            "Id: "+this.id+
-            "\nPlaca: "+this.placa+
-            "\nCapacidad: "+this.capacidad
-         );
+         Console.WriteLine( "\t\t Id: "+this.id+"\t|  Placa: "+this.placa+ "\t|  Capacidad: "+this.capacidad+"\n" );
          conductor.mostConductor();
          apoyo.mostPersApoyo();
       }
