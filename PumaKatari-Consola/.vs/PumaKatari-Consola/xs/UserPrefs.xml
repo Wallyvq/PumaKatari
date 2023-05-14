@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{69AEA1C0-4500-4C39-97E0-4CC85AC4BCDE}|Default">
+  <MonoDevelop.Ide.ItemProperties.PumaKatari-Consola FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PumaKatari-Consola" expanded="True">
+            <Node name="PumaKatari-Consola" expanded="True">
+              <Node name="Pasaje.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

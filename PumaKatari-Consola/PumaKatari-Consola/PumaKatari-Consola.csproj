@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{305E8AEA-9B54-4CD7-B01E-334BF153AB1B}</ProjectGuid>
+    <ProjectGuid>{69AEA1C0-4500-4C39-97E0-4CC85AC4BCDE}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>PumaKatariConsola</RootNamespace>
-    <AssemblyName>PumaKatariConsola</AssemblyName>
+    <AssemblyName>PumaKatari-Consola</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -27,15 +27,15 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Linea.cs" />
-    <Compile Include="Ruta.cs" />
-    <Compile Include="Parada.cs" />
-    <Compile Include="Pasaje.cs" />
-    <Compile Include="PumaKatari.cs" />
     <Compile Include="Bus.cs" />
-    <Compile Include="Persona.cs" />
+    <Compile Include="PumaKatari.cs" />
+    <Compile Include="Parada.cs" />
+    <Compile Include="Ruta.cs" />
+    <Compile Include="Linea.cs" />
+    <Compile Include="Pasaje.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="Pasajero.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Principal.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

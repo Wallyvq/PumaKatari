@@ -1,9 +1,9 @@
 ﻿using System;
 namespace PumaKatariConsola
 {
-   public class Pasajero
+   public class Bus
    {
-      public Pasajero()
+      public Bus()
       {
       }
    }
