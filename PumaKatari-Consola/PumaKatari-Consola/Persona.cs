@@ -15,8 +15,8 @@ namespace PumaKatariConsola {
       // metodos
       public void mostPersona(){
          Console.WriteLine(
-            "\t- Nombre: "+this.nombre+
-            "\n\t- Edad: "+this.edad
+            "\t\t- Nombre: "+this.nombre+
+            "\n\t\t- Edad: "+this.edad
          );
       }
    }

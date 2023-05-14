@@ -19,11 +19,11 @@ namespace PumaKatariConsola
       // metodos
 
       public void mostEmpleado(){
-         Console.WriteLine("Empleado: ");
-         this.mostPersona();
-         Console.WriteLine(
-            "\t- Id: "+this.id+
-            "\n\t- Cargo: "+this.cargo
+         // Console.WriteLine("\tEmpleado: ");
+         // this.mostPersona();
+         // Console.WriteLine( "\t\t- Id: "+this.id+ "\n\t\t- Cargo: "+this.cargo );
+         Console.WriteLine("\t\tNombre: {0} \t| Edad: {1} \t| Id: {2} \t| Cargo: {3}",
+         this.Nombre, this.Edad, this.id, this.cargo
          );
       }
    }

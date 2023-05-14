@@ -11,9 +11,10 @@ namespace PumaKatariConsola {
 
       // Metodos
       public void mostPasajero(){
-         Console.WriteLine("Pasajero: ");
-         this.mostPersona();
-         Console.WriteLine("\t- Tipo Pasajero: "+this.tipoPasajero);
+         /* this.mostPersona();
+         Console.WriteLine("\t\t- Tipo Pasajero: "+this.tipoPasajero+"\n"); */
+         Console.WriteLine("\t\tNombre: {0} \t| Edad: {1} \t| Tipo: {2} ", 
+         this.Nombre, this.Edad, this.tipoPasajero );
       }
    }
 }
