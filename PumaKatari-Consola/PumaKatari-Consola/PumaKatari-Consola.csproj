@@ -31,7 +31,6 @@
     <Compile Include="PumaKatari.cs" />
     <Compile Include="Parada.cs" />
     <Compile Include="Ruta.cs" />
-    <Compile Include="Linea.cs" />
     <Compile Include="Pasaje.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="Pasajero.cs" />

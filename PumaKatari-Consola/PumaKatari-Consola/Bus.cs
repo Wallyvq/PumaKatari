@@ -1,19 +1,10 @@
 ﻿using System;
-namespace PumaKatariConsola
-{
-    public class Bus
-    {
-      private int placa,id, nroPasajeros;
-      private Empleado conductor, pApoyo;
-      private Pasajero[] pasajeros = new Pasajero[50];
-
-        public Bus(int placa, int id, int nroPasajeros,Empleado conductor, Empleado pApoyo) {
-            this.placa = placa;
-            this.id = id;
-            this.nroPasajeros = nroPasajeros;
-            this.conductor = conductor;
-            this.pApoyo = pApoyo;
-        }
+namespace PumaKatariConsola {
+    public class Bus {
+        private int placa,id, nroPasajeros;
+        private Empleado conductor, pApoyo;
+        private Pasajero[] pasajeros = new Pasajero[50];
+        public Bus(){ this.placa = 0; this.id = 0; }
 
         // Setters y Getters
         public int Placa { get => placa; set => placa = value; }
@@ -25,17 +16,49 @@ namespace PumaKatariConsola
 
         //  Metodos
 
-        public void adiPasajero(Pasajero x, int i){ pasajeros[i] = x; }
+        
         public void mostBus(){
             Console.WriteLine( "Bus: "+"\n\tPlaca: "+this.placa+"\t| Id: "+this.id+"\n" );
-
             Console.WriteLine("\tEmpleados:\n ");
             conductor.mostEmpleado(); pApoyo.mostEmpleado();
-
             Console.WriteLine("\n\tPasajeros:\n ");
             for (int i = 0; i < this.nroPasajeros; i++) { pasajeros[i].mostPasajero(); }
-
             Console.WriteLine("");
         }
+
+        public void regBus(){
+            Console.Write("Placa: "); this.placa = int.Parse(Console.ReadLine());
+            Console.Write("Id: "); this.id = int.Parse(Console.ReadLine());
+            Console.Write("Nro Pasajeros: "); this.nroPasajeros = int.Parse(Console.ReadLine());
+            Console.Write("Conductor: \n"); conductor = new Empleado("Conductor") ;this.conductor.leer();
+            Console.Write("Personal Apoyo: \n"); pApoyo = new Empleado("Personal Apoyo"); this.pApoyo.leer();
+        }
+
+        public void pjAleatorio(){
+
+            string[] tipoPersona = new string[]{"estandar","estudiante","discapacidad","adulto mayor","estandar"};
+            string[] nombres = new string[]{"Sofia","Lucas","Diego","Max","Zoe","Leo","Rex","Ben","Mia","Ana"};
+
+            Random rnd = new Random();
+
+            for (int i = 0; i < this.NroPasajeros; i++) { 
+                int iNom = rnd.Next(nombres.Length); 
+                int iTipopj = rnd.Next(tipoPersona.Length);
+                int edad = rnd.Next(18,60); 
+                if( tipoPersona[iTipopj] == "estudiante"){ edad = rnd.Next(5,18); }
+                else if(tipoPersona[iTipopj] == "adulto mayor"){ edad = rnd.Next(60,80); } 
+                Pasajero pj = new Pasajero(nombres[iNom],edad,tipoPersona[iTipopj]);
+                adiPasajero(pj,i);
+            }
+        }
+        public void adiPasajero(Pasajero x, int i){ pasajeros[i] = x; }
+        
+        /* public void asignarTarifa(){
+            for (int i = 0; i < this.nroPasajeros; i++){
+                if(pasajeros[i].TipoPasajero == "estudiante" || pasajeros[i].TipoPasajero == "adulto mayor" || pasajeros[i].TipoPasajero == "discapacidad"){
+                    pasajeros[i].Tarifa.Tarifa = 1 ;
+                }
+            }
+        } */
     }
 }

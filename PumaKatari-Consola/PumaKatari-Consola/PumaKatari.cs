@@ -3,8 +3,10 @@ namespace PumaKatariConsola
 {
    public class PumaKatari
    {
-      public PumaKatari()
+      
+      public PumaKatari(int nroLineas)
       {
+         
       }
    }
 }
