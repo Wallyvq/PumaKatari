@@ -19,8 +19,8 @@ namespace PumaKatariConsola {
         //  Metodos
 
         
-        public void mostBus(){
-            Console.WriteLine( "\tBus: "+"\n\t\tPlaca: "+this.placa+"\t| Id: "+this.id+"\n" );
+        public void mostBus(int j){
+            Console.WriteLine( "\n\t- Datos del Bus {0}: \n"+"\n\t\tPlaca: "+this.placa+"\t| Id: "+this.id+"\n",j);
             Console.WriteLine("\t\tEmpleados:\n ");
             conductor.mostEmpleado(); pApoyo.mostEmpleado();
             Console.WriteLine("\n\t\tPasajeros:\n ");
