@@ -11,13 +11,13 @@ namespace PumaKatariConsola {
       public string Cargo { get => cargo; set => cargo = value; }
       // metodos
       public void mostEmpleado(){
-         Console.WriteLine("\t\tNombre: {0} \t| Edad: {1} \t| Id: {2} \t| Cargo: {3}",
+         Console.WriteLine("\t\t\tNombre: {0} \t| Edad: {1} \t| Id: {2} \t| Cargo: {3}",
          this.Nombre, this.Edad, this.id, this.cargo
          );
       }
       public void leer(){
          this.regPersona();
-         Console.Write("\tId: "); this.id = int.Parse(Console.ReadLine());
+         Console.Write("\t\t\t- Id: "); this.id = int.Parse(Console.ReadLine());
       }
       public void readEmpleado(BinaryReader j){ 
          base.lector(j);

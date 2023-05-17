@@ -20,20 +20,21 @@ namespace PumaKatariConsola {
 
         
         public void mostBus(){
-            Console.WriteLine( "Bus: "+"\n\tPlaca: "+this.placa+"\t| Id: "+this.id+"\n" );
-            Console.WriteLine("\tEmpleados:\n ");
+            Console.WriteLine( "\tBus: "+"\n\t\tPlaca: "+this.placa+"\t| Id: "+this.id+"\n" );
+            Console.WriteLine("\t\tEmpleados:\n ");
             conductor.mostEmpleado(); pApoyo.mostEmpleado();
-            Console.WriteLine("\n\tPasajeros:\n ");
+            Console.WriteLine("\n\t\tPasajeros:\n ");
             for (int i = 0; i < this.nroPasajeros; i++) { pasajeros[i].mostPasajero(); }
             Console.WriteLine("");
         }
 
-        public void regBus(){
-            Console.Write("Placa: "); this.placa = int.Parse(Console.ReadLine());
-            Console.Write("Id: "); this.id = int.Parse(Console.ReadLine());
-            Console.Write("Nro Pasajeros: "); this.nroPasajeros = int.Parse(Console.ReadLine());
-            Console.Write("Conductor: \n"); conductor = new Empleado("Conductor") ;this.conductor.leer();
-            Console.Write("Personal Apoyo: \n"); pApoyo = new Empleado("Personal Apoyo"); this.pApoyo.leer();
+        public void addbus(){
+            Console.Write("\t\tPlaca: "); this.placa = int.Parse(Console.ReadLine());
+            Console.Write("\t\tId: "); this.id = int.Parse(Console.ReadLine());
+            Console.Write("\t\tNro Pasajeros: "); this.nroPasajeros = int.Parse(Console.ReadLine());
+            Console.Write("\t\tConductor: \n"); conductor = new Empleado("Conductor") ;this.conductor.leer();
+            Console.Write("\t\tPersonal Apoyo: \n"); pApoyo = new Empleado("Personal Apoyo"); this.pApoyo.leer();
+            pjAleatorio();
         }
 
         public void pjAleatorio(){
@@ -64,13 +65,12 @@ namespace PumaKatariConsola {
             for (int i = 0; i < this.nroPasajeros; i++) {
                 this.pasajeros[i] = new Pasajero();
                 this.pasajeros[i].readPasajero(j);
-            }
+            } 
         }
 
         public void writeBus(BinaryWriter j){
             j.Write(this.placa); j.Write(this.id); j.Write(this.nroPasajeros);
             this.conductor.writeEmpleado(j); this.pApoyo.writeEmpleado(j);
-            
             for (int i = 0; i < this.nroPasajeros; i++) { this.pasajeros[i].writePasajero(j); }
         }
 

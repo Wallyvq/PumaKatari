@@ -18,12 +18,15 @@ namespace PumaKatariConsola {
                "\t3. Mostrar Registro \n"+
                "\t10. Salir del Programa" 
             );
+            Console.WriteLine("--x--------------------------------------x--");
+
             
             Console.Write("\tOpcion: ");
             op = int.Parse(Console.ReadLine());
             switch (op) {
                case 1: 
                   puma.crear(); 
+                   Console.WriteLine("\n--x-- Restaurando Archivo Vacio --x--\n");
                   break;
                case 2: 
                   puma.adicionar(); 
@@ -38,9 +41,7 @@ namespace PumaKatariConsola {
                   break;             
             }
          } while (op != 10);
-
          
-
          Console.WriteLine("\n\n"); 
          // Console.ReadKey();
       }

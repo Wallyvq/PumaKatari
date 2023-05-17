@@ -5,7 +5,9 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PumaKatari-Consola" expanded="True">
-            <Node name="PumaKatari-Consola" expanded="True" />
+            <Node name="PumaKatari-Consola" expanded="True">
+              <Node name="Pasajero.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

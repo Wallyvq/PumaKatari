@@ -13,13 +13,13 @@ namespace PumaKatariConsola {
       public string Nombre { get => nombre; set => nombre = value; }
       // metodos
       public void regPersona(){
-         Console.Write("\tNombre: "); this.nombre = Console.ReadLine();
-         Console.Write("\tEdad: "); this.edad =  int.Parse(Console.ReadLine());
+         Console.Write("\t\t\t- Nombre: "); this.nombre = Console.ReadLine();
+         Console.Write("\t\t\t- Edad: "); this.edad =  int.Parse(Console.ReadLine());
       }
       public void mostPersona(){
          Console.WriteLine(
-            "\t\t- Nombre: "+this.nombre+
-            "\n\t\t- Edad: "+this.edad
+            "|t\t\t- Nombre: "+this.nombre+
+            "\n\t\t\t- Edad: "+this.edad
          );
       }      
 

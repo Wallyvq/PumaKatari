@@ -21,7 +21,7 @@ namespace PumaKatariConsola {
                regRuta.leerRuta();
                escribe.Seek(0,SeekOrigin.End);
                regRuta.writeRuta(escribe);
-               Console.WriteLine("--x-- Desea Continuar s/n --x--");
+               Console.WriteLine("\n--x-- Desea Continuar s/n --x--");
                Console.Write(" : ");
                sw = Console.ReadLine();  
             } while (sw == "s");
@@ -40,7 +40,7 @@ namespace PumaKatariConsola {
                regRuta.mostRuta();
             }
          }
-         catch(Exception e){ Console.WriteLine("\n--x-- End List --x--\n"); }
+         catch(Exception ){ Console.WriteLine("\n--x-- End List --x--\n"); }
          finally { ruta.Close(); }
       }
       
