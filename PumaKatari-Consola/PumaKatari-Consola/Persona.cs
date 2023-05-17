@@ -1,8 +1,11 @@
 ﻿using System;
+using System.IO;
 namespace PumaKatariConsola {
+   [Serializable]
    public class Persona {
-      private int  edad;
       private string nombre;
+      private int  edad;
+      
       public Persona(string nombre,int edad) { this.nombre = nombre; this.edad = edad; }
       public Persona(){ this.nombre = ""; this.edad = 0; }
       // Setters y Getters
@@ -19,5 +22,11 @@ namespace PumaKatariConsola {
             "\n\t\t- Edad: "+this.edad
          );
       }      
+
+      public void lector(BinaryReader j){ this.nombre = j.ReadString(); this.edad = j.ReadInt32(); }
+      public void escritor(BinaryWriter j){
+         j.Write(this.nombre);
+         j.Write(this.edad);
+      }
    }
 }

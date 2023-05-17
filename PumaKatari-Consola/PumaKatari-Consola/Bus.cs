@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 namespace PumaKatariConsola {
+    [Serializable]
     public class Bus {
         private int placa,id, nroPasajeros;
         private Empleado conductor, pApoyo;
@@ -35,7 +37,6 @@ namespace PumaKatariConsola {
         }
 
         public void pjAleatorio(){
-
             string[] tipoPersona = new string[]{"estandar","estudiante","discapacidad","adulto mayor","estandar"};
             string[] nombres = new string[]{"Sofia","Lucas","Diego","Max","Zoe","Leo","Rex","Ben","Mia","Ana"};
 
@@ -52,6 +53,28 @@ namespace PumaKatariConsola {
             }
         }
         public void adiPasajero(Pasajero x, int i){ pasajeros[i] = x; }
+
+        public void readBus(BinaryReader j){
+            this.placa = j.ReadInt32();
+            this.id = j.ReadInt32();
+            this.nroPasajeros = j.ReadInt32();
+            this.conductor = new Empleado("conductor"); this.conductor.readEmpleado(j);
+            this.pApoyo = new Empleado("Personal Apoyo"); this.pApoyo.readEmpleado(j);
+
+            for (int i = 0; i < this.nroPasajeros; i++) {
+                this.pasajeros[i] = new Pasajero();
+                this.pasajeros[i].readPasajero(j);
+            }
+        }
+
+        public void writeBus(BinaryWriter j){
+            j.Write(this.placa); j.Write(this.id); j.Write(this.nroPasajeros);
+            this.conductor.writeEmpleado(j); this.pApoyo.writeEmpleado(j);
+            
+            for (int i = 0; i < this.nroPasajeros; i++) { this.pasajeros[i].writePasajero(j); }
+        }
+
+
         
         /* public void asignarTarifa(){
             for (int i = 0; i < this.nroPasajeros; i++){
