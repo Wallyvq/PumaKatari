@@ -35,7 +35,7 @@ namespace PumaKatariConsola {
             /* "\n\t- Nro Paradas: "+this.nroParadas+ */
             /* "\n\t- Nro Buses: "+this.nroBus  */
          );
-         Console.WriteLine("\t-Tarifa: "+this.tarifa.Tarifa);
+         Console.WriteLine("\t- Tarifa: "+this.tarifa.Tarifa);
          Console.WriteLine("\t- Paradas: \n");
          for (int i = 0; i < this.nroParadas; i++) { this.paradas[i].mostParada(i+1); }
          for (int i = 0; i < this.nroBus; i++) { this.regBus[i].mostBus(i+1); }
