@@ -27,15 +27,19 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ArchBus.cs" />
+    <Compile Include="ArchRuta.cs" />
+    <Compile Include="ArchFecha.cs" />
+    <Compile Include="ArchEmpleado.cs" />
     <Compile Include="Bus.cs" />
-    <Compile Include="PumaKatari.cs" />
-    <Compile Include="Parada.cs" />
-    <Compile Include="Ruta.cs" />
-    <Compile Include="Pasaje.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="Fecha.cs" />
+    <Compile Include="Parada.cs" />
+    <Compile Include="Pasaje.cs" />
     <Compile Include="Pasajero.cs" />
     <Compile Include="Persona.cs" />
-    <Compile Include="Principal.cs" />
+    <Compile Include="PumaKatari.cs" />
+    <Compile Include="Ruta.cs" /> 
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

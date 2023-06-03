@@ -1,12 +1,19 @@
 ﻿<Properties StartupConfiguration="{69AEA1C0-4500-4C39-97E0-4CC85AC4BCDE}|Default">
   <MonoDevelop.Ide.ItemProperties.PumaKatari-Consola FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="PumaKatari-Consola/ArchEmpleado.cs">
+    <Files>
+      <File FileName="PumaKatari-Consola/ArchBus.cs" Line="6" Column="49" />
+      <File FileName="PumaKatari-Consola/ArchRuta.cs" Line="9" Column="1" />
+      <File FileName="PumaKatari-Consola/Fecha.cs" Line="1" Column="1" />
+      <File FileName="PumaKatari-Consola/ArchFecha.cs" Line="1" Column="1" />
+      <File FileName="PumaKatari-Consola/ArchEmpleado.cs" Line="11" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PumaKatari-Consola" expanded="True">
             <Node name="PumaKatari-Consola" expanded="True">
-              <Node name="Pasajero.cs" selected="True" />
+              <Node name="ArchEmpleado.cs" selected="True" />
             </Node>
           </Node>
         </State>

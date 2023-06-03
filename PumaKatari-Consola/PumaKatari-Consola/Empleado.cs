@@ -7,8 +7,8 @@ namespace PumaKatariConsola {
       private string cargo;   
       public Empleado(string cargo) : base() { this.id = 0; this.cargo = cargo; }
       // Setters y Getters
-      public int Id { get => id; set => id = value; }
-      public string Cargo { get => cargo; set => cargo = value; }
+      public int Id { get { return this.id; } set {this.id = value; } }
+      public string Cargo { get { return this.cargo; } set {this.cargo = value; } }
       // metodos
       public void mostEmpleado(){
          Console.WriteLine("\t\t\tNombre: {0} \t| Edad: {1} \t| Id: {2} \t| Cargo: {3}",

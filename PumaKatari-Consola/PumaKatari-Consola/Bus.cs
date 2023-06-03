@@ -3,85 +3,55 @@ using System.IO;
 namespace PumaKatariConsola {
     [Serializable]
     public class Bus {
-        private int placa,id, nroPasajeros;
+        private string placa, id, nomRuta;
+        private int  nroPasajeros;
         private Empleado conductor, pApoyo;
         private Pasajero[] pasajeros = new Pasajero[50];
-        public Bus(){ this.placa = 0; this.id = 0; }
+        public Bus(){}
 
         // Setters y Getters
-        public int Placa { get => placa; set => placa = value; }
-        public int Id { get => id; set => id = value; }
-        public int NroPasajeros { get => nroPasajeros; set => nroPasajeros = value; }
-        public Empleado Conductor { get => conductor; set => conductor = value; }
-        public Empleado PApoyo { get => pApoyo; set => pApoyo = value; }
-        public Pasajero[] Pasajeros { get => pasajeros; set => pasajeros = value; } 
+        public string Placa { get { return this.placa;} set {this.placa = value;} }
+        public string Id { get { return this.id; } set {this.id = value;} }
+        public int NroPasajeros { get { return this.nroPasajeros; } set {this.nroPasajeros = value;} }
+        public string NomRuta { get{ return this.nomRuta; } set { this.nomRuta = value; } }
+        public Empleado Conductor { get { return this.conductor; } set {this.conductor = value;} }
+        public Empleado PApoyo { get { return this.pApoyo; } set {this.pApoyo = value;} }
+        public Pasajero[] Pasajeros { get { return this.pasajeros; } set {this.pasajeros = value; } }
 
-        //  Metodos
-
-        
-        public void mostBus(int j){
-            Console.WriteLine( "\n\t- Datos del Bus {0}: \n"+"\n\t\tPlaca: "+this.placa+"\t| Id: "+this.id+"\n",j);
+        //  Metodos       
+        public void MostBus(){
+            Console.WriteLine( "\n\t- Datos del Bus: \n"+"\n\t\tPlaca: {0} \t|Id: {1} \t| Nro Ruta: {2}",this.placa,this.id,this.NomRuta);
             Console.WriteLine("\t\tEmpleados:\n ");
             conductor.mostEmpleado(); pApoyo.mostEmpleado();
-            Console.WriteLine("\n\t\tPasajeros:\n ");
-            for (int i = 0; i < this.nroPasajeros; i++) { pasajeros[i].mostPasajero(); }
+            /* Console.WriteLine("\n\t\tPasajeros:\n ");
+            for (int i = 0; i < this.nroPasajeros; i++) { pasajeros[i].mostPasajero(); } */
             Console.WriteLine("");
         }
-
-        public void addbus(){
-            Console.Write("\t\tPlaca: "); this.placa = int.Parse(Console.ReadLine());
-            Console.Write("\t\tId: "); this.id = int.Parse(Console.ReadLine());
-            Console.Write("\t\tNro Pasajeros: "); this.nroPasajeros = int.Parse(Console.ReadLine());
-            Console.Write("\t\tConductor: \n"); conductor = new Empleado("Conductor") ;this.conductor.leer();
-            Console.Write("\t\tPersonal Apoyo: \n"); pApoyo = new Empleado("Personal Apoyo"); this.pApoyo.leer();
-            pjAleatorio();
+        public void LeeBus(){
+            Console.Write("\tPlaca: "); this.placa = Console.ReadLine();
+            Console.Write("\tId: "); this.id = Console.ReadLine();
+            Console.Write("\tNom Ruta: "); this.nomRuta = Console.ReadLine();
+            Console.Write("\tNro Pasajeros: "); this.nroPasajeros = int.Parse(Console.ReadLine());
+            Console.Write("\tConductor: \n"); conductor = new Empleado("Conductor") ;this.conductor.leer();
+            Console.Write("\tPersonal Apoyo: \n"); pApoyo = new Empleado("Personal Apoyo"); this.pApoyo.leer();
         }
-
-        public void pjAleatorio(){
-            string[] tipoPersona = new string[]{"estandar","estudiante","discapacidad","adulto mayor","estandar"};
-            string[] nombres = new string[]{"Sofia","Lucas","Diego","Max","Zoe","Leo","Rex","Ben","Mia","Ana"};
-
-            Random rnd = new Random();
-
-            for (int i = 0; i < this.NroPasajeros; i++) { 
-                int iNom = rnd.Next(nombres.Length); 
-                int iTipopj = rnd.Next(tipoPersona.Length);
-                int edad = rnd.Next(18,60); 
-                if( tipoPersona[iTipopj] == "estudiante"){ edad = rnd.Next(5,18); }
-                else if(tipoPersona[iTipopj] == "adulto mayor"){ edad = rnd.Next(60,80); } 
-                Pasajero pj = new Pasajero(nombres[iNom],edad,tipoPersona[iTipopj]);
-                adiPasajero(pj,i);
-            }
-        }
-        public void adiPasajero(Pasajero x, int i){ pasajeros[i] = x; }
-
-        public void readBus(BinaryReader j){
-            this.placa = j.ReadInt32();
-            this.id = j.ReadInt32();
-            this.nroPasajeros = j.ReadInt32();
+        public void AdiPasajero(Pasajero x, int i){ pasajeros[i] = x; }
+        public void ReadBus(BinaryReader j){
+            this.placa = j.ReadString();
+            this.id = j.ReadString();
+            this.nroPasajeros = j.ReadInt32();this.nomRuta = j.ReadString();
             this.conductor = new Empleado("conductor"); this.conductor.readEmpleado(j);
             this.pApoyo = new Empleado("Personal Apoyo"); this.pApoyo.readEmpleado(j);
-
-            for (int i = 0; i < this.nroPasajeros; i++) {
+            /* for (int i = 0; i < this.nroPasajeros; i++) {
                 this.pasajeros[i] = new Pasajero();
                 this.pasajeros[i].readPasajero(j);
-            } 
+            }  */
         }
-
-        public void writeBus(BinaryWriter j){
-            j.Write(this.placa); j.Write(this.id); j.Write(this.nroPasajeros);
+        public void WriteBus(BinaryWriter j){
+            j.Write(this.placa); j.Write(this.id); j.Write(this.nroPasajeros); j.Write(this.nomRuta);
             this.conductor.writeEmpleado(j); this.pApoyo.writeEmpleado(j);
-            for (int i = 0; i < this.nroPasajeros; i++) { this.pasajeros[i].writePasajero(j); }
+            // for (int i = 0; i < this.nroPasajeros; i++) { this.pasajeros[i].writePasajero(j); }
         }
 
-
-        
-        /* public void asignarTarifa(){
-            for (int i = 0; i < this.nroPasajeros; i++){
-                if(pasajeros[i].TipoPasajero == "estudiante" || pasajeros[i].TipoPasajero == "adulto mayor" || pasajeros[i].TipoPasajero == "discapacidad"){
-                    pasajeros[i].Tarifa.Tarifa = 1 ;
-                }
-            }
-        } */
     }
 }

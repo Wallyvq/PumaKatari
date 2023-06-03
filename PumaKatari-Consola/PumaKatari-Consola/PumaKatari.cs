@@ -2,49 +2,74 @@
 using System.IO;
 namespace PumaKatariConsola {
    public class PumaKatari {
-      
-      private string nomArch;
-      // private int nroRutas;
-      private Ruta regRuta;
-      public PumaKatari(string nomArch) { this.nomArch = nomArch; }
+      public static void Main(){
 
-      // Metodos
-      public void crear(){ if(File.Exists(nomArch)) {File.Delete(nomArch); } }
-      public void adicionar(){
-         string sw;
-         Stream ruta = File.Open(nomArch,FileMode.OpenOrCreate);
-         BinaryWriter escribe = new BinaryWriter(ruta);
-         Console.WriteLine("--x-- Agregar Ruta --x--");
-         try {
-            do {
-               regRuta = new Ruta();
-               regRuta.leerRuta();
-               escribe.Seek(0,SeekOrigin.End);
-               regRuta.writeRuta(escribe);
-               Console.WriteLine("\n--x-- Desea Continuar s/n --x--");
-               Console.Write(" : ");
-               sw = Console.ReadLine();  
-            } while (sw == "s");
-         }
-         catch (Exception) { Console.WriteLine("Finish"); }
-         finally{ ruta.Close(); }
-      }
+         Console.WriteLine("--x--------------------------------------x--");
+         Console.WriteLine("--x--            PUMA KATARI           --x--");
+         Console.WriteLine("--x--------------------------------------x--");
 
-      public void list(){
-         Stream ruta = File.Open(nomArch,FileMode.OpenOrCreate);
-         BinaryReader lee = new BinaryReader(ruta);
-         try {
-            while (true) {
-               regRuta = new Ruta();
-               regRuta.readRuta(lee);
-               regRuta.mostRuta();
+         ArchBus regBus = new ArchBus("RegBuses.dat");
+         ArchRuta regRuta = new ArchRuta("RegRutas.dat");
+
+         //regBus.crearRegBus(); 
+         //regBus.adiBus(); 
+         regBus.mostRegBus();
+         
+
+         //regRuta.crearRegRuta(); 
+         //regRuta.adiRuta(); 
+         regRuta.mostRegRutas();
+
+
+         /* int op;
+         Console.WriteLine("--x--------------------------------------x--");
+         Console.WriteLine("--x--            PUMA KATARI           --x--");
+         Console.WriteLine("--x--------------------------------------x--");
+         do{
+            Console.WriteLine(
+               "\t1. Crear Nuevo Registro \n"+
+               "\t2. Agregar Nuevas Rutas \n"+
+               "\t3. Mostrar Registro \n"+
+               "\t10. Salir del Programa" 
+            );
+            Console.WriteLine("--x--------------------------------------x--");
+            Console.Write("\tOpcion: ");
+            op = int.Parse(Console.ReadLine());
+            switch (op) {
+               case 1: 
+                  //puma.crear(); 
+                   Console.WriteLine("\n--x-- Restaurando Archivo Vacio --x--\n");
+                  break;
+               case 2: 
+                  //puma.adicionar(); 
+                  break;
+               case 3: 
+                  //puma.list(); 
+                  break;             
+               case 10: 
+                  Console.WriteLine("--x--------------------------------------x--");
+                  Console.WriteLine("--x--             FINISH               --x--");
+                  Console.WriteLine("--x--------------------------------------x--");
+                  break;             
             }
-         }
-         catch(Exception ){ Console.WriteLine("\n--x-- End List --x--\n"); }
-         finally { ruta.Close(); }
-      }
+         } while (op != 10);
+         Console.WriteLine("\n\n"); 
+         */
+    
+         
 
-      
+
+      /* public void asignarTarifa(){
+            for (int i = 0; i < this.nroPasajeros; i++){
+                if(pasajeros[i].TipoPasajero == "estudiante" || pasajeros[i].TipoPasajero == "adulto mayor" || pasajeros[i].TipoPasajero == "discapacidad"){
+                    pasajeros[i].Tarifa.Tarifa = 1 ;
+                }
+            }
+        } */
+         
+
+
+      }
       
    }
 }
