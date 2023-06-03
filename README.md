@@ -33,4 +33,4 @@ Orientada a Objetos.
 - Emitir un reporte de la ruta que tiene la mayor cantidad de pasajeros
 
 ### Diagrama de Clases (UML)
-![DiagramaUML.png](https://github.com/Andevc/PumaKatari/blob/master/data/UML.png)
+![DiagramaUML.png](https://github.com/Andevc/PumaKatari/blob/master/data/Diagrama_UML_Final.png)
