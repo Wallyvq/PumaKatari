@@ -8,16 +8,10 @@ namespace PumaKatariConsola {
       private Pasaje tarifa;
       private Parada[] paradas = new Parada[40];
       public Ruta(){  tarifa = new Pasaje(); } 
-
-      // Setters y Getters
       public int NroParadas { get {return this.nroParadas; }  set {this.nroParadas = value; } }
-      
       public string NomRuta { get {return this.nomRuta; }  set {this.nomRuta = value; } }
       public Pasaje Tarifa { get {return this.tarifa;}  set {this.tarifa = value; } }
       public Parada[] Paradas { get {return this.paradas; }  set {this.paradas = value; } }
-
-      // metodos
-
       public void MostRuta(){
          Console.WriteLine("Ruta:");
          Console.WriteLine( "\n\t- Nombre Ruta: "+this.nomRuta );
@@ -32,22 +26,19 @@ namespace PumaKatariConsola {
          
          Console.WriteLine("\t- Agrega al Ubicacion de las Paradas: ");
          
-         for (int i = 0; i < this.nroParadas; i++) { this.paradas[i] = new Parada(); this.paradas[i].leerParada();  }
+         for (int i = 0; i < this.nroParadas; i++) { this.paradas[i] = new Parada(); this.paradas[i].LeeParada();  }
       }
-
       public void ReadRuta(BinaryReader j){
          this.nomRuta = j.ReadString();
          this.nroParadas = j.ReadInt32();
-         
-         this.tarifa.readPasaje(j);
-         for (int i = 0; i < this.nroParadas; i++) { this.paradas[i] = new Parada(); this.paradas[i].lecParada(j);}
+         this.tarifa.RdPasaje(j);
+         for (int i = 0; i < this.nroParadas; i++) { this.paradas[i] = new Parada(); this.paradas[i].RdParada(j);}
       }
       public void WriteRuta(BinaryWriter j){
          j.Write(this.nomRuta);
          j.Write(this.nroParadas);
-         
-         this.tarifa.writePasaje(j);
-         for (int i = 0; i < this.nroParadas; i++) { this.paradas[i].escParad(j); }
+         this.tarifa.WrPasaje(j);
+         for (int i = 0; i < this.nroParadas; i++) { this.paradas[i].WrParada(j); }
       }      
       /* 
       public void pasajeroRandom(Bus x){

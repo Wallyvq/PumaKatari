@@ -4,8 +4,8 @@ namespace PumaKatariConsola {
    public class ArchRuta {
       private string nomArch;
       public ArchRuta(string nomArch) { this.nomArch = nomArch; }
-      public void crearRegRuta(){ if (File.Exists(nomArch) ) { File.Delete(nomArch); } }
-      public void adiRuta(){
+      public void CrearRegRuta(){ if (File.Exists(nomArch) ) { File.Delete(nomArch); } }
+      public void AdiRuta(){
          string sw; int c = 0;
          Stream file = File.Open(nomArch,FileMode.OpenOrCreate);
          BinaryWriter write = new BinaryWriter(file);
@@ -27,7 +27,7 @@ namespace PumaKatariConsola {
          catch (Exception){ Console.WriteLine("\n--x-- Fin Registro Rutas --x--\n"); }
          finally { file.Close(); }
       }
-      public void mostRegRutas(){
+      public void MostRegRutas(){
          Stream file = File.Open(nomArch,FileMode.OpenOrCreate);
          BinaryReader read = new BinaryReader(file);
          Console.WriteLine("\n- LISTADO DEL REGISTRO DE RUTAS: ");

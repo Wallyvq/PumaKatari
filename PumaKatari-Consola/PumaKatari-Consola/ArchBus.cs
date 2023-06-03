@@ -4,8 +4,8 @@ namespace PumaKatariConsola {
    public class ArchBus {
       private string nomArch; 
       public ArchBus(string nomArch) { this.nomArch = nomArch; }
-      public void crearRegBus(){ if (File.Exists(nomArch)) { File.Delete(nomArch); } } 
-      public void adiBus(){
+      public void CrearRegBus(){ if (File.Exists(nomArch)) { File.Delete(nomArch); } } 
+      public void AdiBus(){
          string sw; int c = 0;
          Stream file = File.Open(nomArch, FileMode.OpenOrCreate);
          BinaryWriter write  = new BinaryWriter(file);
@@ -27,7 +27,7 @@ namespace PumaKatariConsola {
          catch (Exception){ Console.WriteLine("\n--x-- Fin Registro Buses --x--\n"); }
          finally { file.Close(); }
       }
-      public void mostRegBus(){
+      public void MostRegBus(){
          Stream file = File.Open(nomArch, FileMode.OpenOrCreate);
          BinaryReader read = new BinaryReader(file);
          Console.WriteLine("LISTADO DE BUSES: ");

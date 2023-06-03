@@ -5,7 +5,7 @@ namespace PumaKatariConsola {
       private string nomArch;
       public ArchEmpleado(string nomArch) { this.nomArch = nomArch; }
       public void CrearRegEmpl(){ if (File.Exists(nomArch)) { File.Delete(nomArch); } }
-      public void RegisEmpleado(){
+      public void AdiEmpleado(){
          Stream file = File.Open(nomArch,FileMode.OpenOrCreate);
          BinaryWriter write = new BinaryWriter(file);
          string sw;
@@ -27,7 +27,7 @@ namespace PumaKatariConsola {
          catch (Exception){ Console.WriteLine("\n--x-- Fin Registro Empleados --x--"); }
          finally { file.Close(); }
       }
-      public void mostRegEmple(){
+      public void MostRegEmple(){
          Stream file = File.Open(nomArch, FileMode.OpenOrCreate);
          BinaryReader read = new BinaryReader(file);
          Console.WriteLine("\n- LISTA DE EMPLEADOS: \n");

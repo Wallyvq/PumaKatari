@@ -13,31 +13,13 @@ namespace PumaKatariConsola {
          ArchEmpleado regEmp = new ArchEmpleado("RegEmpleados.dat");
          ArchFecha regFechaRecorrido = new ArchFecha("RecorridoFechas.dat");
 
-         //regBus.crearRegBus(); 
-         //regBus.adiBus(); 
-         regBus.mostRegBus();
+         int op;
 
-         // regRuta.crearRegRuta(); 
-         // regRuta.adiRuta(); 
-         regRuta.mostRegRutas();
-         
-         // regEmp.CrearRegEmpl();
-         // regEmp.RegisEmpleado(); 
-         regEmp.mostRegEmple();
-
-         //regFechaRecorrido.CrearRegFecha(); regFechaRecorrido.RegisFecha(); 
-         regFechaRecorrido.MostRegFecha();
-
-
-         /* int op;
-         Console.WriteLine("--x--------------------------------------x--");
-         Console.WriteLine("--x--            PUMA KATARI           --x--");
-         Console.WriteLine("--x--------------------------------------x--");
          do{
             Console.WriteLine(
-               "\t1. Crear Nuevo Registro \n"+
+               "\t1. Crear Nuevo Registro del PumaKatari\n"+
                "\t2. Agregar Nuevas Rutas \n"+
-               "\t3. Mostrar Registro \n"+
+               "\t3. Mostrar Todos los Registros \n"+
                "\t10. Salir del Programa" 
             );
             Console.WriteLine("--x--------------------------------------x--");
@@ -45,32 +27,28 @@ namespace PumaKatariConsola {
             op = int.Parse(Console.ReadLine());
             switch (op) {
                case 1: 
-                  //puma.crear(); 
-                   Console.WriteLine("\n--x-- Restaurando Archivo Vacio --x--\n");
+                  regRuta.CrearRegRuta();
+                  regBus.CrearRegBus(); 
+                  regEmp.CrearRegEmpl();
+                  regFechaRecorrido.CrearRegFecha();
                   break;
                case 2: 
-                  //puma.adicionar(); 
+                  
                   break;
                case 3: 
-                  //puma.list(); 
+                  regRuta.MostRegRutas();
+                  regBus.MostRegBus();
+                  regEmp.MostRegEmple();
+                  regFechaRecorrido.MostRegFecha();
                   break;             
                case 10: 
                   Console.WriteLine("--x--------------------------------------x--");
-                  Console.WriteLine("--x--             FINISH               --x--");
+                  Console.WriteLine("--x--         FIN PUMA KATARI          --x--");
                   Console.WriteLine("--x--------------------------------------x--");
                   break;             
             }
          } while (op != 10);
          Console.WriteLine("\n\n"); 
-         */
-      /* public void asignarTarifa(){
-            for (int i = 0; i < this.nroPasajeros; i++){
-                if(pasajeros[i].TipoPasajero == "estudiante" || pasajeros[i].TipoPasajero == "adulto mayor" || pasajeros[i].TipoPasajero == "discapacidad"){
-                    pasajeros[i].Tarifa.Tarifa = 1 ;
-                }
-            }
-        } */
       }
-      
    }
 }
