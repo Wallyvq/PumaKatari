@@ -14,7 +14,7 @@ namespace PumaKatariConsola {
       }
       public void LeeEmpleado(){
          this.LeePersona();
-         Console.Write("\t\t\t- Id: "); this.id = Console.ReadLine();
+         Console.Write("\t\t- Id: "); this.id = Console.ReadLine();
       }
       public void RdEmpleado(BinaryReader j){ 
          base.RdPersona(j);

@@ -12,7 +12,6 @@ namespace PumaKatariConsola {
          Console.WriteLine("\n- REGISTRO DE BUSES (Limite 40): ");
          try {
             do {
-               Console.WriteLine("-------------");
                Bus regBus = new Bus();
                regBus.LeeBus();
                write.Seek(0,SeekOrigin.End);
@@ -31,7 +30,7 @@ namespace PumaKatariConsola {
       public void MostRegBus(){
          Stream file = File.Open(nomArch, FileMode.OpenOrCreate);
          BinaryReader read = new BinaryReader(file);
-         Console.WriteLine("LISTADO DE BUSES: ");
+         Console.WriteLine("LISTADO DE BUSES: \n");
          try{
             while (true) {
                Bus lisBus = new Bus();

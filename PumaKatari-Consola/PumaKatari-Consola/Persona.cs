@@ -10,8 +10,8 @@ namespace PumaKatariConsola {
       public int Edad { get { return this.edad; } set { this.edad = value; } }
       public string Nombre { get { return this.nombre; } set { this.nombre = value; } }
       public void LeePersona(){
-         Console.Write("\t\t\t- Nombre: "); this.nombre = Console.ReadLine();
-         Console.Write("\t\t\t- Edad: "); this.edad =  int.Parse(Console.ReadLine());
+         Console.Write("\t\t- Nombre: "); this.nombre = Console.ReadLine();
+         Console.Write("\t\t- Edad: "); this.edad =  int.Parse(Console.ReadLine());
       }
       public void MostPersona(){ Console.WriteLine("|\t- Nombre: "+this.nombre+"\n\t- Edad: "+this.edad ); } 
 
