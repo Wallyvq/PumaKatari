@@ -3,6 +3,7 @@ using System.IO;
 namespace PumaKatariConsola {
    public class PumaKatari {
       public static void Main(){
+         int op;
 
          Console.WriteLine("--x--------------------------------------x--");
          Console.WriteLine("--x--            PUMA KATARI           --x--");
@@ -13,12 +14,10 @@ namespace PumaKatariConsola {
          ArchEmpleado regEmp = new ArchEmpleado("RegEmpleados.dat");
          ArchFecha regFechaRecorrido = new ArchFecha("RecorridoFechas.dat");
 
-         int op;
-
          do{
             Console.WriteLine(
                "\t1. Crear Nuevo Registro del PumaKatari\n"+
-               "\t2. Agregar Nuevas Rutas \n"+
+               "\t2. Agregar Nuevas Rutas, Buses, Empleados y Fechas de Recorrido \n"+
                "\t3. Mostrar Todos los Registros \n"+
                "\t10. Salir del Programa" 
             );
@@ -33,6 +32,10 @@ namespace PumaKatariConsola {
                   regFechaRecorrido.CrearRegFecha();
                   break;
                case 2: 
+                  regRuta.AdiRuta();
+                  regBus.AdiBus(); 
+                  regEmp.AdiEmpleado();
+                  regFechaRecorrido.AdiFecha();
                   
                   break;
                case 3: 

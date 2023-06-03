@@ -13,7 +13,6 @@ namespace PumaKatariConsola {
       public Pasaje Tarifa { get {return this.tarifa;}  set {this.tarifa = value; } }
       public Parada[] Paradas { get {return this.paradas; }  set {this.paradas = value; } }
       public void MostRuta(){
-         Console.WriteLine("Ruta:");
          Console.WriteLine( "\n\t- Nombre Ruta: "+this.nomRuta );
          Console.WriteLine("\t- Tarifa: "+this.tarifa.Tarifa);
          Console.WriteLine("\t- Paradas: "+this.nroParadas);

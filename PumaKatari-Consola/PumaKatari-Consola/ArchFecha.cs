@@ -5,7 +5,7 @@ namespace PumaKatariConsola {
       private string nomArch;
       public ArchFecha(string nomArch) { this.nomArch = nomArch; }
       public void CrearRegFecha(){ if (File.Exists(nomArch)) { File.Delete(nomArch); } } 
-      public void RegisFecha(){
+      public void AdiFecha(){
          string sw; 
          Stream file = File.Open(nomArch, FileMode.OpenOrCreate);
          BinaryWriter write  = new BinaryWriter(file);
