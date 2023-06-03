@@ -13,7 +13,7 @@ namespace PumaKatariConsola {
       // Metodos
        
       public void mostParada(){ 
-         Console.WriteLine("\t- Ubicacion: {0}",this.ubicacion);
+         Console.Write("\t{0}",this.ubicacion);
       }
 
       public void leerParada(){ Console.Write("\t\t- Ubicacion: ");this.ubicacion = Console.ReadLine(); }

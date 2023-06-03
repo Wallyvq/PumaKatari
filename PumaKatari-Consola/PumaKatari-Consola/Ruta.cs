@@ -22,14 +22,16 @@ namespace PumaKatariConsola {
          Console.WriteLine("Ruta:");
          Console.WriteLine( "\n\t- Nombre Ruta: "+this.nomRuta );
          Console.WriteLine("\t- Tarifa: "+this.tarifa.Tarifa);
-         Console.WriteLine("\t- Paradas: \n");
-         for (int i = 0; i < this.nroParadas; i++) { this.paradas[i].mostParada(); }
+         Console.WriteLine("\t- Paradas: "+this.nroParadas);
+         Console.Write("\t| ");
+         for (int i = 0; i < this.nroParadas; i++) { Console.Write("{0}\t| ",this.paradas[i].Ubicacion); }
       }
       public void LeerRuta(){
          Console.Write("\t- Nombre Ruta: "); this.nomRuta = Console.ReadLine();
          Console.Write("\t- Nro Paradas: "); this.nroParadas = int.Parse(Console.ReadLine());
          
          Console.WriteLine("\t- Agrega al Ubicacion de las Paradas: ");
+         
          for (int i = 0; i < this.nroParadas; i++) { this.paradas[i] = new Parada(); this.paradas[i].leerParada();  }
       }
 
