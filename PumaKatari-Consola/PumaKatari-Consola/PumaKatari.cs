@@ -14,7 +14,19 @@ namespace PumaKatariConsola {
          ArchEmpleado regEmp = new ArchEmpleado("RegEmpleados.dat");
          ArchFecha regFechaRecorrido = new ArchFecha("RecorridoFechas.dat");
 
-         do{
+         // regBus.CrearRegBus();
+         // regBus.AdiBus(); 
+         //regBus.MostRegBus();
+
+         // regEmp.CrearRegEmpl(); regEmp.AdiEmpleado();
+         regEmp.MostRegEmple();
+         
+
+         //regRuta.MostRegRutas();
+         //regFechaRecorrido.MostRegFecha();
+         
+
+         /* do{
             Console.WriteLine(
                "\t1. Crear Nuevo Registro del PumaKatari\n"+
                "\t2. Agregar Nuevas Rutas, Buses, Empleados y Fechas de Recorrido \n"+
@@ -50,8 +62,13 @@ namespace PumaKatariConsola {
                   Console.WriteLine("--x--------------------------------------x--");
                   break;             
             }
-         } while (op != 10);
+         } while (op != 10); */
          Console.WriteLine("\n\n"); 
       }
    }
 }
+
+
+// Zona Sur
+// Cotahuma
+// San Antonio

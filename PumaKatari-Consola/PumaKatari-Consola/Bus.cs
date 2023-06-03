@@ -15,9 +15,9 @@ namespace PumaKatariConsola {
         public string NomRuta { get{ return this.nomRuta; } set { this.nomRuta = value; } }
         public Pasajero[] Pasajeros { get { return this.pasajeros; } set {this.pasajeros = value; } }    
         public void MostBus(){
-            Console.WriteLine( "\n\t\tPlaca: {0} \t|Id: {1} \t| Nom Ruta: {2} \t| Conductor: {3} \t| Pesona Apoyo: {4}"
+            Console.WriteLine( "\t\tPlaca: {0} \t|Id: {1} \t| Nom Ruta: {2}\t| Conductor: {3} \t| Pesona Apoyo: {4}"
             ,this.placa,this.id,this.NomRuta,this.idConductor,this.idPersApoyo);
-            Console.WriteLine("");
+            
         }
         public void LeeBus(){
             Console.Write("\tPlaca: "); this.placa = Console.ReadLine();

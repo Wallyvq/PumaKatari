@@ -8,7 +8,7 @@ namespace PumaKatariConsola {
       public void AdiEmpleado(){
          Stream file = File.Open(nomArch,FileMode.OpenOrCreate);
          BinaryWriter write = new BinaryWriter(file);
-         string sw;
+         string sw; int c = 0;
          Console.WriteLine("\n- REGISTRO DE EMPLEADOS: \n");
          try {
             do {   
@@ -17,12 +17,12 @@ namespace PumaKatariConsola {
                Console.WriteLine("\tDatos Conductor: "); 
                conductor.LeeEmpleado(); 
                Console.WriteLine("\tDatos Pers. Apoyo: "); 
-               pApoyo.LeeEmpleado();
+               pApoyo.LeeEmpleado(); c++;
                write.Seek(0,SeekOrigin.End);
                conductor.WrEmpleado(write); pApoyo.WrEmpleado(write);
-               Console.WriteLine("\n--x-- Desea Continuar s/n --x--");
-               Console.Write(" : "); sw = Console.ReadLine();
-            } while ( sw == "s");         
+               /* Console.WriteLine("\n--x-- Desea Continuar s/n --x--");
+               Console.Write(" : "); sw = Console.ReadLine(); */
+            } while ( c < 15);         
          }
          catch (Exception){ Console.WriteLine("\n--x-- Fin Registro Empleados --x--"); }
          finally { file.Close(); }

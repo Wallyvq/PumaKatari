@@ -12,6 +12,7 @@ namespace PumaKatariConsola {
          Console.WriteLine("\n- REGISTRO DE BUSES (Limite 40): ");
          try {
             do {
+               Console.WriteLine("-------------");
                Bus regBus = new Bus();
                regBus.LeeBus();
                write.Seek(0,SeekOrigin.End);
@@ -21,8 +22,8 @@ namespace PumaKatariConsola {
                else{
                   Console.WriteLine("\n--x-- Desea Continuar s/n --x--");
                   Console.Write(" : "); sw = Console.ReadLine();
-               }
-            } while (sw == "s");
+               } 
+            } while ( sw == "s" );
          }
          catch (Exception){ Console.WriteLine("\n--x-- Fin Registro Buses --x--\n"); }
          finally { file.Close(); }
@@ -45,18 +46,3 @@ namespace PumaKatariConsola {
    }
 }
 
-
-/* 
-      public void pasajeroRandom(Bus x){
-         string[] tipoPersona = new string[]{"estandar","estudiante","discapacidad","adulto mayor","estandar"};
-         string[] nombres = new string[]{"Sofia","Lucas","Diego","Max","Zoe","Leo","Rex","Ben","Mia","Ana"};
-         Random rnd = new Random();
-         for (int i = 0; i < x.NroPasajeros; i++) { 
-            int iNom = rnd.Next(nombres.Length);
-            int iTipopj = rnd.Next(tipoPersona.Length);
-            int edad = rnd.Next(18,60); 
-            if( tipoPersona[iTipopj] == "estudiante"){ edad = rnd.Next(5,18); }
-            else if(tipoPersona[iTipopj] == "adulto mayor"){ edad = rnd.Next(60,80); } 
-            Pasajero pj = new Pasajero(nombres[iNom],edad,tipoPersona[iTipopj]);
-         }
-      } */
