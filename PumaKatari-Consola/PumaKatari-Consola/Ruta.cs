@@ -4,14 +4,14 @@ namespace PumaKatariConsola {
    [Serializable]
    public class Ruta {
       private string nomRuta;
-      private int nroParadas, nroBus; 
+      private int nroParadas; 
       private Pasaje tarifa;
       private Parada[] paradas = new Parada[40];
       public Ruta(){  tarifa = new Pasaje(); } 
 
       // Setters y Getters
       public int NroParadas { get {return this.nroParadas; }  set {this.nroParadas = value; } }
-      public int NroBus { get {return this.nroBus;}  set {this.nroBus = value; } }
+      
       public string NomRuta { get {return this.nomRuta; }  set {this.nomRuta = value; } }
       public Pasaje Tarifa { get {return this.tarifa;}  set {this.tarifa = value; } }
       public Parada[] Paradas { get {return this.paradas; }  set {this.paradas = value; } }
@@ -23,12 +23,12 @@ namespace PumaKatariConsola {
          Console.WriteLine( "\n\t- Nombre Ruta: "+this.nomRuta );
          Console.WriteLine("\t- Tarifa: "+this.tarifa.Tarifa);
          Console.WriteLine("\t- Paradas: \n");
-         for (int i = 0; i < this.nroParadas; i++) { this.paradas[i].mostParada(i+1); }
+         for (int i = 0; i < this.nroParadas; i++) { this.paradas[i].mostParada(); }
       }
       public void LeerRuta(){
          Console.Write("\t- Nombre Ruta: "); this.nomRuta = Console.ReadLine();
          Console.Write("\t- Nro Paradas: "); this.nroParadas = int.Parse(Console.ReadLine());
-         Console.Write("\t- Nro Buses: "); this.nroBus = int.Parse(Console.ReadLine());
+         
          Console.WriteLine("\t- Agrega al Ubicacion de las Paradas: ");
          for (int i = 0; i < this.nroParadas; i++) { this.paradas[i] = new Parada(); this.paradas[i].leerParada();  }
       }
@@ -36,14 +36,14 @@ namespace PumaKatariConsola {
       public void ReadRuta(BinaryReader j){
          this.nomRuta = j.ReadString();
          this.nroParadas = j.ReadInt32();
-         this.nroBus = j.ReadInt32();
+         
          this.tarifa.readPasaje(j);
          for (int i = 0; i < this.nroParadas; i++) { this.paradas[i] = new Parada(); this.paradas[i].lecParada(j);}
       }
       public void WriteRuta(BinaryWriter j){
          j.Write(this.nomRuta);
          j.Write(this.nroParadas);
-         j.Write(this.nroBus);
+         
          this.tarifa.writePasaje(j);
          for (int i = 0; i < this.nroParadas; i++) { this.paradas[i].escParad(j); }
       }      

@@ -10,15 +10,23 @@ namespace PumaKatariConsola {
 
          ArchBus regBus = new ArchBus("RegBuses.dat");
          ArchRuta regRuta = new ArchRuta("RegRutas.dat");
+         ArchEmpleado regEmp = new ArchEmpleado("RegEmpleados.dat");
+         ArchFecha regFechaRecorrido = new ArchFecha("RecorridoFechas.dat");
 
          //regBus.crearRegBus(); 
          //regBus.adiBus(); 
          regBus.mostRegBus();
-         
 
-         //regRuta.crearRegRuta(); 
-         //regRuta.adiRuta(); 
+         // regRuta.crearRegRuta(); 
+         // regRuta.adiRuta(); 
          regRuta.mostRegRutas();
+         
+         // regEmp.CrearRegEmpl();
+         // regEmp.RegisEmpleado(); 
+         regEmp.mostRegEmple();
+
+         //regFechaRecorrido.CrearRegFecha(); regFechaRecorrido.RegisFecha(); 
+         regFechaRecorrido.MostRegFecha();
 
 
          /* int op;
@@ -55,10 +63,6 @@ namespace PumaKatariConsola {
          } while (op != 10);
          Console.WriteLine("\n\n"); 
          */
-    
-         
-
-
       /* public void asignarTarifa(){
             for (int i = 0; i < this.nroPasajeros; i++){
                 if(pasajeros[i].TipoPasajero == "estudiante" || pasajeros[i].TipoPasajero == "adulto mayor" || pasajeros[i].TipoPasajero == "discapacidad"){
@@ -66,9 +70,6 @@ namespace PumaKatariConsola {
                 }
             }
         } */
-         
-
-
       }
       
    }

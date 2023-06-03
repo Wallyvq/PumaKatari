@@ -4,8 +4,7 @@ namespace PumaKatariConsola {
     [Serializable]
     public class Bus {
         private string placa, id, nomRuta;
-        private int  nroPasajeros;
-        private Empleado conductor, pApoyo;
+        private int  nroPasajeros, idConductor, idPersApoyo;
         private Pasajero[] pasajeros = new Pasajero[50];
         public Bus(){}
 
@@ -13,16 +12,17 @@ namespace PumaKatariConsola {
         public string Placa { get { return this.placa;} set {this.placa = value;} }
         public string Id { get { return this.id; } set {this.id = value;} }
         public int NroPasajeros { get { return this.nroPasajeros; } set {this.nroPasajeros = value;} }
+        public int IdConductor { get { return this.idConductor; } set {this.idConductor = value;} }
+        public int IdPersApoyo { get { return this.idPersApoyo; } set {this.idPersApoyo = value;} }
         public string NomRuta { get{ return this.nomRuta; } set { this.nomRuta = value; } }
-        public Empleado Conductor { get { return this.conductor; } set {this.conductor = value;} }
-        public Empleado PApoyo { get { return this.pApoyo; } set {this.pApoyo = value;} }
+        
         public Pasajero[] Pasajeros { get { return this.pasajeros; } set {this.pasajeros = value; } }
 
         //  Metodos       
         public void MostBus(){
-            Console.WriteLine( "\n\t- Datos del Bus: \n"+"\n\t\tPlaca: {0} \t|Id: {1} \t| Nro Ruta: {2}",this.placa,this.id,this.NomRuta);
-            Console.WriteLine("\t\tEmpleados:\n ");
-            conductor.mostEmpleado(); pApoyo.mostEmpleado();
+            Console.WriteLine( "\n\t- Datos del Bus: \n"+"\n\t\tPlaca: {0} \t|Id: {1} \t| Nom Ruta: {2} \t| Conductor: {3} \t| Pesona Apoyo: {4}"
+            ,this.placa,this.id,this.NomRuta,this.idConductor,this.idPersApoyo);
+            
             /* Console.WriteLine("\n\t\tPasajeros:\n ");
             for (int i = 0; i < this.nroPasajeros; i++) { pasajeros[i].mostPasajero(); } */
             Console.WriteLine("");
@@ -32,24 +32,32 @@ namespace PumaKatariConsola {
             Console.Write("\tId: "); this.id = Console.ReadLine();
             Console.Write("\tNom Ruta: "); this.nomRuta = Console.ReadLine();
             Console.Write("\tNro Pasajeros: "); this.nroPasajeros = int.Parse(Console.ReadLine());
-            Console.Write("\tConductor: \n"); conductor = new Empleado("Conductor") ;this.conductor.leer();
-            Console.Write("\tPersonal Apoyo: \n"); pApoyo = new Empleado("Personal Apoyo"); this.pApoyo.leer();
+            Console.Write("\tID Conductor: "); this.idConductor = int.Parse(Console.ReadLine());
+            Console.Write("\tID Pesonal Apoyo: "); this.idPersApoyo = int.Parse(Console.ReadLine());
+            
         }
         public void AdiPasajero(Pasajero x, int i){ pasajeros[i] = x; }
-        public void ReadBus(BinaryReader j){
+        public void RdBus(BinaryReader j){
             this.placa = j.ReadString();
             this.id = j.ReadString();
-            this.nroPasajeros = j.ReadInt32();this.nomRuta = j.ReadString();
-            this.conductor = new Empleado("conductor"); this.conductor.readEmpleado(j);
-            this.pApoyo = new Empleado("Personal Apoyo"); this.pApoyo.readEmpleado(j);
+            this.nroPasajeros = j.ReadInt32();
+            this.nomRuta = j.ReadString();
+            this.idConductor = j.ReadInt32();
+            this.idPersApoyo = j.ReadInt32();
+
             /* for (int i = 0; i < this.nroPasajeros; i++) {
                 this.pasajeros[i] = new Pasajero();
                 this.pasajeros[i].readPasajero(j);
             }  */
         }
-        public void WriteBus(BinaryWriter j){
-            j.Write(this.placa); j.Write(this.id); j.Write(this.nroPasajeros); j.Write(this.nomRuta);
-            this.conductor.writeEmpleado(j); this.pApoyo.writeEmpleado(j);
+        public void WrBus(BinaryWriter j){
+            j.Write(this.placa); 
+            j.Write(this.id); 
+            j.Write(this.nroPasajeros); 
+            j.Write(this.nomRuta);
+            j.Write(this.idConductor);
+            j.Write(this.idPersApoyo);
+            
             // for (int i = 0; i < this.nroPasajeros; i++) { this.pasajeros[i].writePasajero(j); }
         }
 

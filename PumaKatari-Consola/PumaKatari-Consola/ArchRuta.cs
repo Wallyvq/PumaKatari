@@ -9,7 +9,7 @@ namespace PumaKatariConsola {
          string sw; int c = 0;
          Stream file = File.Open(nomArch,FileMode.OpenOrCreate);
          BinaryWriter write = new BinaryWriter(file);
-         Console.WriteLine("REGISTRO DE RUTAS (Limite 7): ");
+         Console.WriteLine("\n- REGISTRO DE RUTAS (Limite 7): ");
          try {
             do {
                Ruta regRuta = new Ruta();
@@ -24,13 +24,13 @@ namespace PumaKatariConsola {
                }
             } while (sw == "s");
          }
-         catch (Exception){ Console.WriteLine("--x-- Fin Registro Buses --x--"); }
+         catch (Exception){ Console.WriteLine("\n--x-- Fin Registro Rutas --x--\n"); }
          finally { file.Close(); }
       }
       public void mostRegRutas(){
          Stream file = File.Open(nomArch,FileMode.OpenOrCreate);
          BinaryReader read = new BinaryReader(file);
-         Console.WriteLine("LISTADO DEL REGISTRO DE RUTAS: ");
+         Console.WriteLine("\n- LISTADO DEL REGISTRO DE RUTAS: ");
          try{
             while(true){
                Ruta listRuta = new Ruta();
@@ -38,7 +38,7 @@ namespace PumaKatariConsola {
                listRuta.MostRuta();
             }
          }
-         catch (System.Exception){ Console.WriteLine("--x-- Fin Listado Buses --x--"); }
+         catch (System.Exception){ Console.WriteLine("\n--x-- Fin Listado Buses --x--\n"); }
          finally { file.Close(); }
       }
    }
