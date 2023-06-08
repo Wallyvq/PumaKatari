@@ -1,0 +1,26 @@
+﻿<Window x:Class="mostRegistro.Add_Bus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mostRegistro"
+        mc:Ignorable="d"
+        Title="Add_Bus" Height="450" Width="400">
+    <Grid x:Name="wndRegisBus">
+        <Label Content="DATOS BUS: " HorizontalAlignment="Left" Margin="40,23,0,0" VerticalAlignment="Top" Width="107"/>
+        <Label Content="Placa: " HorizontalAlignment="Left" Margin="144,64,0,0" VerticalAlignment="Top"/>
+        <Label Content="ID Bus: " HorizontalAlignment="Left" Margin="138,103,0,0" VerticalAlignment="Top"/>
+        <Label Content="ID Conductor: " HorizontalAlignment="Left" Margin="101,143,0,0" VerticalAlignment="Top"/>
+        <Label Content="ID Personal Apoyo: " HorizontalAlignment="Left" Margin="74,184,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nombre Ruta: " HorizontalAlignment="Left" Margin="100,224,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPlaca" HorizontalAlignment="Left" Margin="200,64,0,0" VerticalAlignment="Top" Width="120" Height="20"  />
+        <TextBox x:Name="txtIdBus" HorizontalAlignment="Left" Margin="200,103,0,0"  VerticalAlignment="Top" Width="120" Height="21"/>
+        <TextBox x:Name="txtIdConductor" HorizontalAlignment="Left" Margin="200,143,0,0" VerticalAlignment="Top" Width="120" Height="21"/>
+        <TextBox x:Name="txtIdApoyo" HorizontalAlignment="Left" Margin="200,184,0,0"  VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="txtNomRuta" HorizontalAlignment="Left" Margin="200,224,0,0" VerticalAlignment="Top" Width="120" Height="20" />
+        <Button x:Name="btnAgregarBus" Content="Adicionar" HorizontalAlignment="Left" Margin="104,329,0,0" VerticalAlignment="Top" Height="40" Width="196" Click="btnAddBus"/>
+        <Label Content="Nro Pasajeros: " HorizontalAlignment="Left" Margin="99,264,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNroPasajeros" HorizontalAlignment="Left" Margin="200,264,0,0" VerticalAlignment="Top" Width="120" Height="20" />
+
+    </Grid>
+</Window>

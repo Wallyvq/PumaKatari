@@ -1,0 +1,32 @@
+﻿<Window x:Class="mostRegistro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mostRegistro"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="560" Width="960" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+    <Grid Background="#FFE8E8D9">
+        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="760,147,0,0" VerticalAlignment="Top" Height="38" Width="120" Click="btnCrearReg" FontFamily="Verdana" Background="#FF23201E" Foreground="White"/>
+        <Button Content="Adicionar" HorizontalAlignment="Left" Margin="760,207,0,0" VerticalAlignment="Top" Height="40" Width="120" Click="btnAdicionar" FontFamily="Verdana" Background="#FF23201E" Foreground="White"/>
+        <Button Content="Mostrar" HorizontalAlignment="Left" Margin="760,267,0,0" VerticalAlignment="Top" Height="40" Width="120" FontFamily="Verdana" Click="btnListar" Background="#FF23201E" Foreground="White"/>
+        <DataGrid x:Name="dgBuses" Margin="80,0,240,120" FrozenColumnCount="6" Height="360" VerticalAlignment="Bottom" Background="#FFD2D2D2" >
+            <DataGrid.Resources>
+                <Style TargetType="DataGridColumnHeader">
+
+                    <Setter Property="Background" Value= "#23201e" />
+                    <Setter Property="Foreground" Value="White" />
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="  Placa " Binding="{Binding Placa}" Width="100" />
+                <DataGridTextColumn Header="  ID Bus " Binding="{Binding Id}" Width="100" />
+                <DataGridTextColumn Header="  ID Condutor " Binding="{Binding IdConductor}" Width="100" />
+                <DataGridTextColumn Header="  ID Apoyo  " Binding="{Binding IdPersApoyo}" Width="100" />
+                <DataGridTextColumn Header="  Ruta " Binding="{Binding NomRuta}" Width="100" />
+                <DataGridTextColumn Header="  Nro Pasajeros " Binding="{Binding NroPasajeros}" Width="100" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

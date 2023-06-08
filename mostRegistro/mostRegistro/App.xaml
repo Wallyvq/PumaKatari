@@ -1,0 +1,9 @@
+﻿<Application x:Class="mostRegistro.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:mostRegistro"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <FontFamily x:Key="Roboto">Roboto</FontFamily>
+    </Application.Resources>
+</Application>
