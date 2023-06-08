@@ -1,0 +1,6 @@
+/home/cris/programing/PumaKatari_Lab121/PumaKatari-Consola/PumaKatari-Consola/bin/Debug/PumaKatari-Consola.exe
+/home/cris/programing/PumaKatari_Lab121/PumaKatari-Consola/PumaKatari-Consola/bin/Debug/PumaKatari-Consola.pdb
+/home/cris/programing/PumaKatari_Lab121/PumaKatari-Consola/PumaKatari-Consola/obj/x86/Debug/PumaKatari-Consola.csproj.AssemblyReference.cache
+/home/cris/programing/PumaKatari_Lab121/PumaKatari-Consola/PumaKatari-Consola/obj/x86/Debug/PumaKatari-Consola.csproj.CoreCompileInputs.cache
+/home/cris/programing/PumaKatari_Lab121/PumaKatari-Consola/PumaKatari-Consola/obj/x86/Debug/PumaKatari-Consola.exe
+/home/cris/programing/PumaKatari_Lab121/PumaKatari-Consola/PumaKatari-Consola/obj/x86/Debug/PumaKatari-Consola.pdb
