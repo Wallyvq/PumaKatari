@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PumaKatari/1.0.0": {
+        "runtime": {
+          "PumaKatari.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PumaKatari/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
