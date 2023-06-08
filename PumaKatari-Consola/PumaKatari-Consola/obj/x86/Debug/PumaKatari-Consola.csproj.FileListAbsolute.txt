@@ -4,6 +4,7 @@
 /home/cris/programing/PumaKatari_Lab121/PumaKatari-Consola/PumaKatari-Consola/obj/x86/Debug/PumaKatari-Consola.csproj.CoreCompileInputs.cache
 /home/cris/programing/PumaKatari_Lab121/PumaKatari-Consola/PumaKatari-Consola/obj/x86/Debug/PumaKatari-Consola.exe
 /home/cris/programing/PumaKatari_Lab121/PumaKatari-Consola/PumaKatari-Consola/obj/x86/Debug/PumaKatari-Consola.pdb
+<<<<<<< HEAD
 D:\dotnet\PumaKatari\PumaKatari-Consola\PumaKatari-Consola\bin\Debug\PumaKatari-Consola.exe.config
 D:\dotnet\PumaKatari\PumaKatari-Consola\PumaKatari-Consola\bin\Debug\PumaKatari-Consola.exe
 D:\dotnet\PumaKatari\PumaKatari-Consola\PumaKatari-Consola\bin\Debug\PumaKatari-Consola.pdb
@@ -12,3 +13,5 @@ D:\dotnet\PumaKatari\PumaKatari-Consola\PumaKatari-Consola\obj\x86\Debug\PumaKat
 D:\dotnet\PumaKatari\PumaKatari-Consola\PumaKatari-Consola\obj\x86\Debug\PumaKatari-Consola.csproj.CoreCompileInputs.cache
 D:\dotnet\PumaKatari\PumaKatari-Consola\PumaKatari-Consola\obj\x86\Debug\PumaKatari-Consola.exe
 D:\dotnet\PumaKatari\PumaKatari-Consola\PumaKatari-Consola\obj\x86\Debug\PumaKatari-Consola.pdb
+=======
+>>>>>>> 1894cd0dc55b71df6212a1922029931f8c09a8ca
