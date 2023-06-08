@@ -53,7 +53,7 @@ namespace PumaKatari {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PumaKatari;V1.0.0.0;component/pumakatari.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PumaKatari;component/pumakatari.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\PumaKatari.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

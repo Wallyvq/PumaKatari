@@ -33,7 +33,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="PumaKatari.xaml">
+    <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Screens\Buses.xaml">
