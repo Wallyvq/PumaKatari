@@ -53,7 +53,7 @@ namespace PumaKatari.Screens {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PumaKatari;V1.0.0.0;component/screens/registro_rutas.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PumaKatari;component/screens/registro_rutas.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Screens\Registro_Rutas.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

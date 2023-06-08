@@ -61,7 +61,7 @@ namespace PumaKatari.Screens.DataFill {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PumaKatari;V1.0.0.0;component/screens/datafill/datos_bus.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PumaKatari;component/screens/datafill/datos_bus.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Screens\DataFill\Datos_Bus.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

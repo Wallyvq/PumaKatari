@@ -53,7 +53,7 @@ namespace PumaKatari.Screens.DataFill {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PumaKatari;V1.0.0.0;component/screens/datafill/fecha_recorridos.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PumaKatari;component/screens/datafill/fecha_recorridos.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Screens\DataFill\Fecha_Recorridos.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

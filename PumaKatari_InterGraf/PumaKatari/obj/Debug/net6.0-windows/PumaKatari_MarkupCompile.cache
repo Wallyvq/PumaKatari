@@ -1,20 +1,20 @@
 ﻿PumaKatari
-1.0.0.0
+
 
 winexe
 C#
 .cs
-d:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\
 PumaKatari
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-d:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\App.xaml
-91411864761
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\App.xaml
+9-660005148
 
-25-1576900826
+23-1828568561
 1942146798439
-MainWindow.xaml;Screens\Buses.xaml;Screens\DataFill\Datos_Bus.xaml;Screens\DataFill\Datos_Empleado.xaml;Screens\DataFill\Datos_Ruta.xaml;Screens\DataFill\Fecha_Recorridos.xaml;Screens\Fechas_Recorrido.xaml;Screens\Registro_Empleados.xaml;Screens\Registro_Rutas.xaml;
+MainWindow.xaml;Screens\DataFill\Datos_Bus.xaml;Screens\DataFill\Datos_Empleado.xaml;Screens\DataFill\Datos_Ruta.xaml;Screens\DataFill\Fecha_Recorridos.xaml;Screens\Fechas_Recorrido.xaml;Screens\Registro_Buses.xaml;Screens\Registro_Empleados.xaml;Screens\Registro_Rutas.xaml;
 
-True
+False
 

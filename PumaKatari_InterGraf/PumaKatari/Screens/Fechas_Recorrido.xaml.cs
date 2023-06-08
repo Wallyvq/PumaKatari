@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PumaKatariConsola;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,28 @@ namespace PumaKatari.Screens
     /// </summary>
     public partial class Fechas_Recorrido : Window
     {
+        public ArchFecha fechaRecorrida = new ArchFecha("FechaRecorrido.dat");
         public Fechas_Recorrido()
         {
             InitializeComponent();
         }
+        private void btnCrearFR_Click(object sender, RoutedEventArgs e)
+        {
+            fechaRecorrida.CrearRegFecha();
+            MessageBox.Show("Nuevo Archivo Fecha Recorrido Creada");
+        }
+        private void btnAdicionarFR_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnMostrarFR_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        
+
+        
     }
 }

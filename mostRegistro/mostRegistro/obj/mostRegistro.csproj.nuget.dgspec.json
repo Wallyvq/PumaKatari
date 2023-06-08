@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dotnet\\mostRegistro\\mostRegistro\\mostRegistro.csproj": {}
+    "D:\\dotnet\\PumaKatari\\mostRegistro\\mostRegistro\\mostRegistro.csproj": {}
   },
   "projects": {
-    "D:\\dotnet\\mostRegistro\\mostRegistro\\mostRegistro.csproj": {
+    "D:\\dotnet\\PumaKatari\\mostRegistro\\mostRegistro\\mostRegistro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnet\\mostRegistro\\mostRegistro\\mostRegistro.csproj",
+        "projectUniqueName": "D:\\dotnet\\PumaKatari\\mostRegistro\\mostRegistro\\mostRegistro.csproj",
         "projectName": "mostRegistro",
-        "projectPath": "D:\\dotnet\\mostRegistro\\mostRegistro\\mostRegistro.csproj",
+        "projectPath": "D:\\dotnet\\PumaKatari\\mostRegistro\\mostRegistro\\mostRegistro.csproj",
         "packagesPath": "C:\\Users\\MiPC\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnet\\mostRegistro\\mostRegistro\\obj\\",
+        "outputPath": "D:\\dotnet\\PumaKatari\\mostRegistro\\mostRegistro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

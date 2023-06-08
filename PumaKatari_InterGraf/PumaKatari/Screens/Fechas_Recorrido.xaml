@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PumaKatari.Screens"
         mc:Ignorable="d"
-        Title="Fechas_Recorrido" Height="450" Width="800">
-    <Grid>
-        
+        Title="Fechas De Recorrido Por Bus" Height="350" Width="500" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+    <Grid Width="500" Height="350" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Button x:Name="btnCrearFR" Content="Crear" Height="30" Margin="0,72,20,0" Width="100" HorizontalAlignment="Right" Grid.IsSharedSizeScope="True" Click="btnCrearFR_Click" VerticalAlignment="Top"/>
+        <Button x:Name="btnAdicionarFR" Content="Adicionar" Height="30" Margin="0,132,20,188" Width="100" HorizontalAlignment="Right" Click="btnAdicionarFR_Click"/>
+        <Button x:Name="btnMostrarFR" Content="Mostrar" HorizontalAlignment="Right" Height="30" Margin="0,192,20,128" Width="100" RenderTransformOrigin="0.75,4.252" Click="btnMostrarFR_Click"/>
+
+        <DataGrid x:Name="dgFechaRecorrido" Margin="40,30,0,30" FrozenColumnCount="2" HorizontalAlignment="Left">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#1515" />
+                    <Setter Property="Foreground" Value="red" />
+                    <Setter Property="BorderBrush" Value="OrangeRed"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCellsPanel">
+                    <Setter Property="Background" Value="Orange"/>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header = " ID Bus " Binding = "{Binding IdBus}" Width="160" />
+                <DataGridTextColumn Header = " Fecha Recorrido" Binding = "{Binding FechaReg}" Width="160" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

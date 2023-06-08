@@ -27,9 +27,10 @@ namespace PumaKatari
             //screens.Buses bus = new screens.Buses();
             //bus.ShowDialog();
 
-            Screens.DataFill.Datos_Bus bus = new Screens.DataFill.Datos_Bus();
-            bus.ShowDialog();
-
+            //Screens.DataFill.Datos_Bus bus = new Screens.DataFill.Datos_Bus();
+            //bus.ShowDialog();
+            Screens.Fechas_Recorrido fechas_Recorrido = new Screens.Fechas_Recorrido();
+            fechas_Recorrido.ShowDialog();
         }
     }
 }

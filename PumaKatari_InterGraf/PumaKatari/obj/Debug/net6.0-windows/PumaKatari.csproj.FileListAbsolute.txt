@@ -41,7 +41,6 @@ D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\bin\Debug\net6.0-windows\Pu
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\bin\Debug\net6.0-windows\PumaKatari.dll
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\bin\Debug\net6.0-windows\PumaKatari.pdb
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\PumaKatari.csproj.AssemblyReference.cache
-D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\Buses.g.cs
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\DataFill\Datos_Bus.g.cs
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\DataFill\Datos_Empleado.g.cs
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\DataFill\Datos_Ruta.g.cs
@@ -52,7 +51,6 @@ D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Sc
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\App.g.cs
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\PumaKatari_MarkupCompile.cache
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\PumaKatari_MarkupCompile.lref
-D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\Buses.baml
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\DataFill\Datos_Bus.baml
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\DataFill\Datos_Empleado.baml
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\DataFill\Datos_Ruta.baml
@@ -72,3 +70,5 @@ D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Pu
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\ref\PumaKatari.dll
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\MainWindow.g.cs
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\MainWindow.baml
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\Registro_Buses.g.cs
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\Registro_Buses.baml
