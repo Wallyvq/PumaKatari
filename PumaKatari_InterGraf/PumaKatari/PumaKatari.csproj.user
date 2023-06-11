@@ -7,9 +7,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Screens\Registro_Buses.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Screens\DataFill\Datos_Bus.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -25,6 +22,9 @@
     <Compile Update="Screens\Fechas_Recorrido.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Screens\Registro_Buses.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Screens\Registro_Empleados.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,9 +34,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Screens\Registro_Buses.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Screens\DataFill\Datos_Bus.xaml">
@@ -52,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Screens\Fechas_Recorrido.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Registro_Buses.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Screens\Registro_Empleados.xaml">

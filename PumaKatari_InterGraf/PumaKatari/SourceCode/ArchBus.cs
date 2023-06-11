@@ -11,23 +11,23 @@ namespace PumaKatariConsola {
          BinaryWriter write  = new BinaryWriter(file);
          Console.WriteLine("\n- REGISTRO DE BUSES (Limite 40): ");
          try {
-            do {
+            //do {
                Bus regBus = new Bus();
-               regBus.LeeBus();
+               //regBus.LeeBus();
                write.Seek(0,SeekOrigin.End);
                regBus.WrBus(write);
-               c++;
-               if( c >= 40){ sw = "n"; Console.WriteLine("Alcanzaste el Limite de Buses"); }
-               else{
-                  Console.WriteLine("\n--x-- Desea Continuar s/n --x--");
-                  Console.Write(" : "); sw = Console.ReadLine();
-               } 
-            } while ( sw == "s" );
+               //c++;
+               //if( c >= 40){ sw = "n"; Console.WriteLine("Alcanzaste el Limite de Buses"); }
+              // else{
+               //   Console.WriteLine("\n--x-- Desea Continuar s/n --x--");
+               //   Console.Write(" : "); sw = Console.ReadLine();
+              /// } 
+            //} while ( sw == "s" );
          }
          catch (Exception){ Console.WriteLine("\n--x-- Fin Registro Buses --x--\n"); }
          finally { file.Close(); }
       }
-      public void MostRegBus(){
+      /*public void MostRegBus(){
          Stream file = File.Open(nomArch, FileMode.OpenOrCreate);
          BinaryReader read = new BinaryReader(file);
          Console.WriteLine("LISTADO DE BUSES: \n");
@@ -41,7 +41,7 @@ namespace PumaKatariConsola {
          catch (System.Exception){ Console.WriteLine("\n--x-- Fin Listado Buses --x--\n"); }
          finally { file.Close(); }
       }
-
+      */
    }
 }
 

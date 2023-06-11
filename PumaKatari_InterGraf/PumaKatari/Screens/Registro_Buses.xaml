@@ -1,12 +1,26 @@
-﻿<Window x:Class="PumaKatari.screens.Buses"
+﻿<Window x:Class="PumaKatari.Screens.Registro_Buses"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PumaKatari.screens"
+        xmlns:local="clr-namespace:PumaKatari.Screens"
         mc:Ignorable="d"
-        Title="Buses" Height="450" Width="800">
-    <Grid>
-        
+        Title="Registro_Buses" Height="400" Width="800">
+    <Grid Height="384" VerticalAlignment="Center" HorizontalAlignment="Left" Width="800">
+        <DataGrid x:Name="dgBuses" FrozenColumnCount="6" Margin="80,0,0,0" Width="500" HorizontalAlignment="Left" Height="264" VerticalAlignment="Center">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="80" Header="Placa" Binding="{Binding Placa}" />
+                <DataGridTextColumn Width="80" Header="ID Bus" Binding="{Binding Id}" />
+                <DataGridTextColumn Width="80" Header="ID Conductor" Binding="{Binding IdConductor}" />
+                <DataGridTextColumn Width="80" Header="ID Pers. Apoyo" Binding="{Binding IdPersApoyo}" />
+                <DataGridTextColumn Width="80" Header="Nombre Ruta" Binding="{Binding NomRuta}" />
+                <DataGridTextColumn Width="80" Header="Nro. Pasajeros" Binding="{Binding NroPasajeros}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnCrearB" Content="Crear" HorizontalAlignment="Left" Margin="625,99,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="btnCrearB_Click"/>
+        <Button x:Name="btnAdicionarB" Content="Adicionar" HorizontalAlignment="Left" Margin="625,164,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="btnAdicionarB_Clicl"/>
+        <Button x:Name="btnSalirB" Content="Salir" HorizontalAlignment="Left" Margin="625,239,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="btnSalirB_click"/>
+
+
     </Grid>
 </Window>
