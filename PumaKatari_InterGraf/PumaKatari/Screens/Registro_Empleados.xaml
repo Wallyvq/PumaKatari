@@ -10,9 +10,33 @@
         <DataGrid x:Name="dgEmpelados" Margin="70,74,310,74"/>
         
         
-        <Button x:Name="btnCrearRegEmp" Content="Crear" HorizontalAlignment="Left" Margin="580,74,0,0" VerticalAlignment="Top" Height="50" Width="135" Click="btnCrearRegEmp_Click"/>
-        <Button x:Name="btnAdicionarEmp" Content="ADICIONAR" HorizontalAlignment="Left" Margin="580,167,0,0" VerticalAlignment="Top" Height="50" Width="135" Click="btnAdicionarEmp_Click"/>
-        <Button x:Name="btnCancelar" Content="CANCELAR" HorizontalAlignment="Left" Margin="580,269,0,0" VerticalAlignment="Top" Height="50" Width="135" Click="btnCancelar_Click"/>
+        <Button x:Name="btnCrearReg" 
+                Height="50" Width="135"         
+                Content="Crear" 
+                HorizontalAlignment="Left" 
+                Margin="580,74,0,0" 
+                VerticalAlignment="Top" 
+                
+                Click="btnCrearReg_Click"> 
+    </Button>
+        <Button x:Name="btnAdicionar" 
+                Height="50" Width="135"        
+                Content="ADICIONAR" 
+                HorizontalAlignment="Left" 
+                Margin="580,167,0,0" 
+                VerticalAlignment="Top" 
+                
+                Click="btnAdicionar_Click"> 
+        </Button>
+        <Button x:Name="btnClose" 
+                Height="50" Width="135"        
+                Content="CANCELAR" 
+                HorizontalAlignment="Left" 
+                Margin="580,269,0,0" 
+                VerticalAlignment="Top" 
+                
+                Click="btnClose_Click"> 
+        </Button>
 
     </Grid>
 </Window>

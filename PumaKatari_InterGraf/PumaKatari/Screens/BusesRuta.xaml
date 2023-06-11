@@ -6,22 +6,24 @@
         xmlns:local="clr-namespace:PumaKatari.Screens"
         mc:Ignorable="d"
         Title="BusesRuta" Height="450" Width="800">
-    <Grid>
-        <DataGrid x:Name="dgBusesRuta" Margin="45,104,265,70">
-            <DataGrid.Columns>
-                <DataGridTextColumn Width="80" Header="Placa" Binding="{Binding Placa}" />
-                <DataGridTextColumn Width="80" Header="ID Bus" Binding="{Binding Id}" />
-                <DataGridTextColumn Width="80" Header="ID Conductor" Binding="{Binding IdConductor}" />
-                <DataGridTextColumn Width="80" Header="ID Pers. Apoyo" Binding="{Binding IdPersApoyo}" />
-                <DataGridTextColumn Width="80" Header="Nombre Ruta" Binding="{Binding NomRuta}" />
-                <DataGridTextColumn Width="80" Header="Nro. Pasajeros" Binding="{Binding NroPasajeros}" />
-            </DataGrid.Columns>
-        </DataGrid>
-        <Label Content="Lista de los Buses Asignados :" FontSize="30" HorizontalAlignment="Left" Margin="45,24,0,0" VerticalAlignment="Top" Height="55" Width="400"/>
-        <Label Content="Nombre Ruta : " HorizontalAlignment="Left" Margin="565,103,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="560,144,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Buscar" HorizontalAlignment="Left" Margin="560,217,0,0" VerticalAlignment="Top" Height="40" Width="160"/>
-        <Button Content="Salir" HorizontalAlignment="Left" Margin="560,324,0,0" VerticalAlignment="Top" Height="40" Width="160"/>
+    <Border>
+        <Grid>
+            <DataGrid x:Name="dgBusesRuta" Margin="45,104,265,70">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="80" Header="Placa" Binding="{Binding Placa}" />
+                    <DataGridTextColumn Width="80" Header="ID Bus" Binding="{Binding Id}" />
+                    <DataGridTextColumn Width="80" Header="ID Conductor" Binding="{Binding IdConductor}" />
+                    <DataGridTextColumn Width="80" Header="ID Pers. Apoyo" Binding="{Binding IdPersApoyo}" />
+                    <DataGridTextColumn Width="80" Header="Nombre Ruta" Binding="{Binding NomRuta}" />
+                    <DataGridTextColumn Width="80" Header="Nro. Pasajeros" Binding="{Binding NroPasajeros}" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label Content="Lista de los Buses Asignados :" FontSize="30" HorizontalAlignment="Left" Margin="45,24,0,0" VerticalAlignment="Top" Height="55" Width="400"/>
+            <Label Content="Nombre Ruta : " HorizontalAlignment="Left" Margin="565,103,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Margin="560,144,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <Button Content="Buscar" HorizontalAlignment="Left" Margin="560,217,0,0" VerticalAlignment="Top" Height="40" Width="160"/>
+            <Button Content="Salir" HorizontalAlignment="Left" Margin="560,324,0,0" VerticalAlignment="Top" Height="40" Width="160"/>
 
-    </Grid>
+        </Grid>
+    </Border>
 </Window>

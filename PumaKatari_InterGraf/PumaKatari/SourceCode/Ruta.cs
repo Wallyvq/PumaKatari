@@ -7,27 +7,17 @@ namespace PumaKatariConsola {
       private int nroParadas; 
       private Pasaje tarifa;
       private Parada[] paradas = new Parada[40];
-      public Ruta(){  tarifa = new Pasaje(); } 
+      public Ruta(){  tarifa = new Pasaje(); } // Constructor vacio para el Cast
+      // Constuctor Parametrizado para Adicionar un Objeto Bus al Archivo
+      public Ruta( string nomRuta, int nroParadas){
+         this.nomRuta = nomRuta;
+         this.nroParadas = nroParadas;
+      }
       public int NroParadas { get {return this.nroParadas; }  set {this.nroParadas = value; } }
       public string NomRuta { get {return this.nomRuta; }  set {this.nomRuta = value; } }
       public Pasaje Tarifa { get {return this.tarifa;}  set {this.tarifa = value; } }
       public Parada[] Paradas { get {return this.paradas; }  set {this.paradas = value; } }
-      public void MostRuta(){
-         Console.WriteLine( "\n\tNombre Ruta: {0}\t| Nro Paradas: {1}\t| Tarifa: {2}",
-            this.nomRuta,this.nroParadas,this.tarifa.Tarifa
-         );
-         Console.Write("\n\t\t\t ");
-         for (int i = 0; i < this.nroParadas; i++) { Console.Write("{0}. \"{1}\"\t ",i+1,this.paradas[i].Ubicacion); }
-         Console.WriteLine("");
-      }
-      public void LeerRuta(){
-         Console.Write("\t- Nombre Ruta: "); this.nomRuta = Console.ReadLine();
-         Console.Write("\t- Nro Paradas: "); this.nroParadas = int.Parse(Console.ReadLine());
-         
-         Console.WriteLine("\t- Agrega al Ubicacion de las Paradas: ");
-         
-         for (int i = 0; i < this.nroParadas; i++) { this.paradas[i] = new Parada(); this.paradas[i].LeeParada();  }
-      }
+      
       public void ReadRuta(BinaryReader j){
          this.nomRuta = j.ReadString();
          this.nroParadas = j.ReadInt32();
@@ -54,5 +44,24 @@ namespace PumaKatariConsola {
             Pasajero pj = new Pasajero(nombres[iNom],edad,tipoPersona[iTipopj]);
          }
       } */
+
+      /* 
+      public void MostRuta(){
+         Console.WriteLine( "\n\tNombre Ruta: {0}\t| Nro Paradas: {1}\t| Tarifa: {2}",
+            this.nomRuta,this.nroParadas,this.tarifa.Tarifa
+         );
+         Console.Write("\n\t\t\t ");
+         for (int i = 0; i < this.nroParadas; i++) { Console.Write("{0}. \"{1}\"\t ",i+1,this.paradas[i].Ubicacion); }
+         Console.WriteLine("");
+      }
+      public void LeerRuta(){
+         Console.Write("\t- Nombre Ruta: "); this.nomRuta = Console.ReadLine();
+         Console.Write("\t- Nro Paradas: "); this.nroParadas = int.Parse(Console.ReadLine());
+         
+         Console.WriteLine("\t- Agrega al Ubicacion de las Paradas: ");
+         
+         for (int i = 0; i < this.nroParadas; i++) { this.paradas[i] = new Parada(); this.paradas[i].LeeParada();  }
+      } */
+
    }
 }

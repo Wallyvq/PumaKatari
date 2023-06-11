@@ -14,50 +14,46 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace PumaKatari.Screens
-{
-    /// <summary>
-    /// Lógica de interacción para Fechas_Recorrido.xaml
-    /// </summary>
-    public partial class Fechas_Recorrido : Window
-    {
+namespace PumaKatari.Screens {
+    public partial class Fechas_Recorrido : Window {
         public ArchFecha fechaRecorrida = new ArchFecha("RegistroFechas.dat");
-        public Fechas_Recorrido()
-        {
+        public Fechas_Recorrido() {
+            
             InitializeComponent();
-            ActualizarLista();
+            ActualizarArchivo();
+
         }
-        private void btnCrearFR_Click(object sender, RoutedEventArgs e)
-        {
+        private void btnCrear_Click(object sender, RoutedEventArgs e) {
             fechaRecorrida.CrearRegFecha();
             MessageBox.Show("Nuevo Archivo Fecha Recorrido Creada");
         }
-        private void btnAdicionarFR_Click(object sender, RoutedEventArgs e)
-        {
+        private void btnAdicionar_Click(object sender, RoutedEventArgs e) {
             DataFill.Fecha_Recorridos fechaRecorridos = new DataFill.Fecha_Recorridos();
             fechaRecorridos.ShowDialog();
-            ActualizarLista();
+            ActualizarArchivo();
         }
-        private void ActualizarLista()
-        {
+
+        // El Metodo ActualizarArchivo sustituye al metodo Listar en la Clase ArchFecha
+        private void ActualizarArchivo() {
             Stream file = File.Open("RegistroFechas.dat", FileMode.OpenOrCreate);
             BinaryReader read = new BinaryReader(file);
-            List<Fecha> fechaList = new List<Fecha>();
-            try
-            {
-                while (true)
-                {
+            
+            List<Fecha> listRegFechas = new List<Fecha>();
+            
+            try {
+                while (true) {
                     Fecha fecha = new Fecha();
                     fecha.RdFecha(read);
-                    fechaList.Add(fecha);
+                    listRegFechas.Add(fecha);
                 }
             }
-            catch (Exception) { Console.WriteLine("-----"); }
+            catch (Exception) { Console.WriteLine("--x-- Fin Actualizacion --x--"); }
+            
             finally { file.Close(); }
-            dgFechaRecorrido.ItemsSource = fechaList;
+
+            dgFechaRecorrido.ItemsSource = listRegFechas;
         }
-        private void btnSalirFR_Click(object sender, RoutedEventArgs e)
-        {
+        private void btnClose_Click(object sender, RoutedEventArgs e) {
             this.Close();
         }
     }

@@ -17,9 +17,33 @@
                 <DataGridTextColumn Width="80" Header="Nro. Pasajeros" Binding="{Binding NroPasajeros}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnCrearB" Content="Crear" HorizontalAlignment="Left" Margin="625,99,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="btnCrearB_Click"/>
-        <Button x:Name="btnAdicionarB" Content="Adicionar" HorizontalAlignment="Left" Margin="625,164,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="btnAdicionarB_Clicl"/>
-        <Button x:Name="btnSalirB" Content="Salir" HorizontalAlignment="Left" Margin="625,239,0,0" VerticalAlignment="Top" Height="40" Width="115" Click="btnSalirB_click"/>
+        <Button x:Name="btnCrearReg" 
+                Content="CREAR" 
+                HorizontalAlignment="Left" 
+                Margin="625,99,0,0" 
+                VerticalAlignment="Top" 
+                Height="40" Width="115" 
+                Click="btnCrearReg_Click">
+        </Button>
+
+        <Button x:Name="btnAdicionar" 
+                Content="ADICIONAR" 
+                HorizontalAlignment="Left" 
+                Margin="625,164,0,0" 
+                VerticalAlignment="Top" 
+                Height="40" Width="115" 
+                Click="btnAdicionar_Click" >
+        </Button>
+        
+        
+        <Button x:Name="btnClose" 
+                Content="SALIR" 
+                HorizontalAlignment="Left" 
+                Margin="625,239,0,0" 
+                VerticalAlignment="Top" 
+                Height="40" Width="115" 
+                Click="btnCLose_Click">
+        </Button>
 
 
     </Grid>

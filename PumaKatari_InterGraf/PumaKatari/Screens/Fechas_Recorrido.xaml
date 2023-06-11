@@ -8,20 +8,39 @@
         WindowStartupLocation="CenterScreen"
         Title="Fechas De Recorrido Por Bus" Height="350" Width="500" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
     <Grid Width="500" Height="350" VerticalAlignment="Center" HorizontalAlignment="Center">
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnCrearFR" Content="Crear" Height="30" Margin="0,72,20,0" Width="100" HorizontalAlignment="Right" Grid.IsSharedSizeScope="True" Click="btnCrearFR_Click" VerticalAlignment="Top" Grid.Column="1"/>
-        <Button x:Name="btnAdicionarFR" Content="Adicionar" Height="30" Margin="0,132,20,188" Width="100" HorizontalAlignment="Right" Click="btnAdicionarFR_Click" Grid.Column="1"/>
-        <Button x:Name="btnSalirFR" Content="Salir" HorizontalAlignment="Right" Height="30" Margin="0,192,20,128" Width="100" RenderTransformOrigin="0.75,4.252" Click="btnSalirFR_Click" Grid.Column="1"/>
+        
+        <Button x:Name="btnCrear" 
+                Content="Crear" 
+                Height="30" Width="100" 
+                Margin="0,72,20,0" 
+                HorizontalAlignment="Right" 
+                 Click="btnCrear_Click" VerticalAlignment="Top" Grid.Column="1"/>
+        
+        <Button x:Name="btnAdicionar" 
+                Content="Adicionar" 
+                Height="30" Width="100" 
+                Margin="0,132,20,188" 
+                HorizontalAlignment="Right" 
+                Click="btnAdicionar_Click" Grid.Column="1"/>
+
+        <Button x:Name="btnClose" 
+                Content="Salir" 
+                Height="30" Width="100" 
+                Margin="0,192,20,128" 
+                HorizontalAlignment="Right" 
+                RenderTransformOrigin="0.75,4.252" 
+                Click="btnClose_Click" Grid.Column="1"/>
 
         <DataGrid x:Name="dgFechaRecorrido" Margin="40,0,138,0" FrozenColumnCount="2" Grid.ColumnSpan="2" Height="290" VerticalAlignment="Center">
             <DataGrid.Resources>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="Background" Value="#e1e1e1" />
                     <Setter Property="Foreground" Value="Black" />
-
                 </Style>
             </DataGrid.Resources>
 
