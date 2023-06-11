@@ -1,18 +1,22 @@
 ﻿using System;
 using System.IO ;
+using System.Numerics;
+using System.Windows.Controls;
+
 namespace PumaKatariConsola {
    public class ArchBus {
       private string nomArch; 
       public ArchBus(string nomArch) { this.nomArch = nomArch; }
-      public void CrearRegBus(){ if (File.Exists(nomArch)) { File.Delete(nomArch); } } 
-      public void AdiBus(){
+      public void CrearRegBus(){ if (File.Exists(nomArch)) { File.Delete(nomArch); } }
+        public void AdiBus( string placa,string idBus,string idConductor,string idApoyo,string nomRuta,string nroPj )
+        {
          string sw; int c = 0;
          Stream file = File.Open(nomArch, FileMode.OpenOrCreate);
          BinaryWriter write  = new BinaryWriter(file);
          Console.WriteLine("\n- REGISTRO DE BUSES (Limite 40): ");
          try {
             //do {
-               Bus regBus = new Bus();
+               Bus regBus = new Bus(placa,idBus,idConductor,idApoyo,nomRuta,int.Parse(nroPj));
                //regBus.LeeBus();
                write.Seek(0,SeekOrigin.End);
                regBus.WrBus(write);

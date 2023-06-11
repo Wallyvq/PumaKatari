@@ -22,14 +22,7 @@ namespace PumaKatari
     {
         public MainWindow()
         {
-            InitializeComponent();
-            
-            //screens.Buses bus = new screens.Buses();
-            //bus.ShowDialog();
-
-            //Screens.DataFill.Datos_Bus bus = new Screens.DataFill.Datos_Bus();
-            //bus.ShowDialog();
-            
+            InitializeComponent();           
         }
 
         private void btnArchRF_click(object sender, RoutedEventArgs e)
@@ -48,5 +41,13 @@ namespace PumaKatari
         {
             this.Close();
         }
+
+        private void nbtnmpleados_Click(object sender, RoutedEventArgs e)
+        {
+            Screens.Registro_Empleados empleados = new Screens.Registro_Empleados();
+            empleados.ShowDialog();
+        }
+
+
     }
 }

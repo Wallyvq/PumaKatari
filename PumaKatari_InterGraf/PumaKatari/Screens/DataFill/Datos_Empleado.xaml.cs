@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PumaKatariConsola;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,23 @@ namespace PumaKatari.Screens.DataFill
         public Datos_Empleado()
         {
             InitializeComponent();
+        }
+
+        private void btnAdicionar_Click(object sender, RoutedEventArgs e)
+        {
+            string nombre = txtNombreEmp.Text;
+            string edad = txtEdadEmp.Text;
+            string idEmp = txtIdEmp.Text;
+            string cargo = txtCargoEmp.Text;
+
+            ArchEmpleado regEmpleado = new ArchEmpleado("RegistroEmpleados.dat");
+            regEmpleado.AdiEmpleado(nombre, edad, idEmp,cargo);
+            this.Close();
+
+        }
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

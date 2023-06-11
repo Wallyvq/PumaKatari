@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PumaKatari.Screens.DataFill"
         mc:Ignorable="d"
-        Title="Datos_Empleado" Height="450" Width="800">
+        Title="Datos_Empleado" Height="450" Width="480">
     <Grid>
-        
+        <Label Content="DATOS EMPLEADO" HorizontalAlignment="Left" Margin="178,24,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nombre : " HorizontalAlignment="Left" Margin="115,80,0,0" VerticalAlignment="Top"/>
+        <Label Content="Edad : " HorizontalAlignment="Left" Margin="115,120,0,0" VerticalAlignment="Top"/>
+        <Label Content="ID Empleado : " HorizontalAlignment="Left" Margin="94,160,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cargo : " HorizontalAlignment="Left" Margin="110,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.687,-1.732"/>
+        <TextBox x:Name="txtNombreEmp" HorizontalAlignment="Left" Margin="240,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtEdadEmp" HorizontalAlignment="Left" Margin="240,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtIdEmp" HorizontalAlignment="Left" Margin="240,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCargoEmp" HorizontalAlignment="Left" Margin="240,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <Button x:Name="btnAdicionar" Content="AGREGAR" HorizontalAlignment="Center" Margin="0,259,0,0" VerticalAlignment="Top" Height="40" Width="207" Click="btnAdicionar_Click"/>
+        <Button x:Name="btnCancel" Content="CANCELAR" HorizontalAlignment="Center" Margin="0,319,0,0" VerticalAlignment="Top" Height="40" Width="206" Click="btnCancel_Click"/>
     </Grid>
 </Window>

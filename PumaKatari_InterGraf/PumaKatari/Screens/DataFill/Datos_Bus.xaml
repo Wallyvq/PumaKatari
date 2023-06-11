@@ -18,14 +18,16 @@
         <Label Content="ID Pers. Apoyo : " HorizontalAlignment="Left" Margin="60,181,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
         <Label Content="Nom Ruta : " HorizontalAlignment="Left" Margin="60,221,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.237,-1.539" Height="26" Width="95"/>
         <Label Content="Nro Pasajeros : " HorizontalAlignment="Left" Margin="60,262,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
-        <TextBox HorizontalAlignment="Left" Margin="160,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="160,104,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="160,144,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="160,184,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20"/>
-        <TextBox HorizontalAlignment="Left" Margin="160,224,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20"/>
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,304,0,0" VerticalAlignment="Top" Height="30" Width="160"/>
-        <TextBox HorizontalAlignment="Left" Margin="160,264,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20"/>
-        <Button x:Name="btnCancel" Content="Button" Margin="80,354,80,0" VerticalAlignment="Top" Height="30" Click="btnCancel_Click"/>
+        
+        <TextBox x:Name="txtPlaca" HorizontalAlignment="Left" Margin="160,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="txtIdBus" HorizontalAlignment="Left" Margin="160,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="txtIdConductor" HorizontalAlignment="Left" Margin="160,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="txtIdApoyo" HorizontalAlignment="Left" Margin="160,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="txtNomRuta" HorizontalAlignment="Left" Margin="160,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="txtNroPj" HorizontalAlignment="Left" Margin="160,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
+        
+        <Button x:Name="btnAgregar" Content="Adicionar" HorizontalAlignment="Center" Margin="0,304,0,0" VerticalAlignment="Top" Height="30" Width="160" Click="btnAgregar_Click"/>
+        <Button x:Name="btnCancel" Content="Cancelar" Margin="80,354,80,0" VerticalAlignment="Top" Height="30" Click="btnCancel_Click"/>
 
     </Grid>
 </Window>

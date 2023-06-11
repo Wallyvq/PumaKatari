@@ -9,7 +9,7 @@
     <Grid>
         <Button x:Name="btnArchFR" Content="Fechas Recorrido" HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" Width="240" Height="45" Click="btnArchRF_click"/>
         <Button x:Name="btnArchBus" Content="Registro buses" HorizontalAlignment="Center" Margin="0,109,0,0" VerticalAlignment="Top" Width="240" Height="42" Click="btnArchBus_click"/>
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,174,0,0" VerticalAlignment="Top" Width="240" Height="47"/>
+        <Button x:Name="btnEmpleados" Content="EMpleados" HorizontalAlignment="Center" Margin="0,174,0,0" VerticalAlignment="Top" Width="240" Height="47" Click="nbtnmpleados_Click"/>
         <Button Content="Button" HorizontalAlignment="Center" Margin="0,244,0,0" VerticalAlignment="Top" Width="240" Height="39"/>
         <Button x:Name="exit" Content="Salir" HorizontalAlignment="Center" Margin="0,309,0,0" VerticalAlignment="Top" Width="240" Height="50" Click="exit_click"/>
 

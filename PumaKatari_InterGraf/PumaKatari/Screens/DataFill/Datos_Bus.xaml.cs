@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PumaKatariConsola;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,21 @@ namespace PumaKatari.Screens.DataFill
         {
             InitializeComponent();
         }
+        private void btnAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            string placa = txtPlaca.Text;
+            string idBus = txtIdBus.Text;
+            string idConductor = txtIdConductor.Text;
+            string idApoyo = txtIdApoyo.Text;
+            string nomRuta = txtNomRuta.Text;
+            string nroPj = txtNroPj.Text;
+            Bus bus = new Bus();
 
+            ArchBus regBus = new ArchBus("RegistroBuses.dat");
+            regBus.AdiBus(placa,idBus,idConductor,idApoyo,nomRuta,nroPj);
+
+            this.Close();
+        }
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
