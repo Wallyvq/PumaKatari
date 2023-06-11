@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Screens\BusesRuta.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Screens\DataFill\Datos_Bus.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
     <Compile Update="Screens\Fechas_Recorrido.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Screens\IngresosJornada.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Screens\Registro_Buses.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,9 +37,18 @@
     <Compile Update="Screens\Registro_Rutas.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Screens\ReporteNroPasajeros.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\TrayectoRuta.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Puma_Katari.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\BusesRuta.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Screens\DataFill\Datos_Bus.xaml">
@@ -51,6 +66,9 @@
     <Page Update="Screens\Fechas_Recorrido.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Screens\IngresosJornada.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Screens\Registro_Buses.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -58,6 +76,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Screens\Registro_Rutas.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\ReporteNroPasajeros.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\TrayectoRuta.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

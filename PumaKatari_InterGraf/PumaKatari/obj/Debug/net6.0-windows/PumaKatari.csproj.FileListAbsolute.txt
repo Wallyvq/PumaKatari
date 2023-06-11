@@ -68,7 +68,15 @@ D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\re
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\PumaKatari.pdb
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\PumaKatari.genruntimeconfig.cache
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\ref\PumaKatari.dll
-D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\MainWindow.g.cs
-D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\MainWindow.baml
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\Registro_Buses.g.cs
 D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\Registro_Buses.baml
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\BusesRuta.g.cs
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\IngresosJornada.g.cs
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\ReporteNroPasajeros.g.cs
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\TrayectoRuta.g.cs
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\BusesRuta.baml
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\IngresosJornada.baml
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\ReporteNroPasajeros.baml
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Screens\TrayectoRuta.baml
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Puma_Katari.g.cs
+D:\dotnet\PumaKatari\PumaKatari_InterGraf\PumaKatari\obj\Debug\net6.0-windows\Puma_Katari.baml

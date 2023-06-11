@@ -7,4 +7,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="bgMain_PumaKatari.png" />
+    <None Remove="log.png" />
+    <None Remove="Screens\DataFill\bg.png" />
+    <None Remove="Screens\DataFill\fechas.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="bgMain_PumaKatari.png" />
+    <Resource Include="log.png" />
+    <Resource Include="Screens\DataFill\bg.png" />
+    <Resource Include="Screens\DataFill\fechas.png" />
+  </ItemGroup>
+
 </Project>

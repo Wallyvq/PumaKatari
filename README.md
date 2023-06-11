@@ -34,3 +34,7 @@ Orientada a Objetos.
 
 ### Diagrama de Clases (UML)
 ![DiagramaUML.png](https://github.com/Andevc/PumaKatari/blob/master/data/Diagrama_UML_Final.png)
+
+### Ventana Principal
+
+![WindowMain](https://github.com/Andevc/PumaKatari/blob/master/data/PumaKatari_MainWindow.png)

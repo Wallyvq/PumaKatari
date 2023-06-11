@@ -10,42 +10,70 @@
         WindowStartupLocation="CenterScreen"
         
         
-        Title="Fecha_Recorridos" Height="400" Width="350">
-    <Border Background="#f5f3f1" >
-
+        Title="Fecha_Recorridos" Height="450" Width="350">
+    <Border>
+        <Border.Background>
+            <ImageBrush ImageSource="/Screens/DataFill/fechas.png"
+                        Stretch="Fill"/>
+        </Border.Background>
         <Grid Width="350" Height="400"
               HorizontalAlignment="Center"                
-              VerticalAlignment="Bottom" 
-              Margin="0,0,0,0">
+              VerticalAlignment="Center">
             
+
             <Label Content="Fechas de Recorrido" 
-                   HorizontalAlignment="Center" Height="58" 
+                   HorizontalAlignment="Center" Height="38" 
                    VerticalAlignment="Top" Width="260" 
-                   FontFamily="Humanst521 BT" 
+                   FontFamily="Square721 BT" 
                    FontSize="24" 
                    HorizontalContentAlignment="Center" 
-                   Margin="0,60,0,0"/>
-            
-            <Label Content="ID Bus : " HorizontalAlignment="Left" Margin="77,115,0,0" VerticalAlignment="Top"/>
-            
-            <Label Content="Fecha : " HorizontalAlignment="Left" Margin="81,165,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.276,-0.577"/>
-            
-            <TextBox x:Name="txtIdBus" HorizontalAlignment="Left" Margin="135,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
-            
-            <TextBox x:Name="txtFecha" HorizontalAlignment="Left" Margin="136,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
-            
+                   Margin="0,90,0,0"/>
+
+            <Label Content="ID Bus : " HorizontalAlignment="Left" Margin="77,152,0,0" VerticalAlignment="Top" FontFamily="Square721 BT"/>
+
+            <Label Content="Fecha : " HorizontalAlignment="Left" Margin="81,202,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.276,-0.577" FontFamily="Square721 BT"/>
+
+            <TextBox x:Name="txtIdBus" 
+                     HorizontalAlignment="Left"
+                     Margin="135,155,0,0" 
+                     VerticalAlignment="Top"
+                     Width="120" Height="20" 
+                     FontFamily="Square721 BT"
+                     Background="Transparent"
+                     Foreground="Black"
+                     CaretBrush="Gray"
+                     BorderBrush="#1C1D24"
+                     BorderThickness="0,0,0,1"
+                     VerticalContentAlignment="Center"
+                     >
+
+            </TextBox>
+
+            <TextBox x:Name="txtFecha" 
+                     HorizontalAlignment="Left" 
+                     Margin="136,205,0,0" 
+                     VerticalAlignment="Top" 
+                     Width="120" Height="20" 
+                     FontFamily="Square721 BT"
+                     Background="Transparent"
+                     Foreground="Black"
+                     CaretBrush="Gray"
+                     BorderBrush="#1C1D24"
+                     BorderThickness="0,0,0,1"
+                     VerticalContentAlignment="Center"/>
+
             <Button x:Name="btnAdiFr" 
                     Content="A G R E G A R"
-                    Margin="80,213,80,98"
+                    Margin="80,240,80,71"
                     Foreground="White"
-                    FontFamily="Humanst521 BT"
                     FontWeight="Bold"
                     Cursor="Hand"
-                    Click="btnAdiFr_click"
+                    
+                    Click="btnAdiFr_click" FontFamily="Square721 BT"
                     >
                 <Button.Style>
                     <Style TargetType="Button">
-                        <Setter Property="Background" Value="#ff433d"/>
+                        <Setter Property="Background" Value="#f9b573"/>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#282525"/>
@@ -65,19 +93,27 @@
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
+                <Button.Effect>
+                    <DropShadowEffect 
+                        ShadowDepth="5"
+                        Direction="315"
+                        Opacity="0.4"
+                        Color="Black"
+                        />
+                </Button.Effect>
             </Button>
             <Button x:Name="btnCancel" 
                     Content="C A N C E L A R"  
-                    Margin="80,286,80,58" 
+                    Margin="95,320,95,40" 
                     Height="40" Width="160" 
                     Foreground="White"
-                    FontFamily="Humanst521 BT"
+                    FontFamily="Square721 BT"
                     FontWeight="Bold"
                     Cursor="Hand"
                     Click="btnCancel_click">
                 <Button.Style>
                     <Style TargetType="Button">
-                        <Setter Property="Background" Value="#ff433d"/>
+                        <Setter Property="Background" Value="#f9b573"/>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="#282525"/>
@@ -95,6 +131,14 @@
                         </Border>
                     </ControlTemplate>
                 </Button.Template>
+                <Button.Effect>
+                    <DropShadowEffect 
+                        ShadowDepth="5"
+                        Direction="315"
+                        Opacity="0.4"
+                        Color="Black"
+                        />
+                </Button.Effect>
             </Button>
         </Grid>
     </Border>
