@@ -41,7 +41,22 @@ namespace PumaKatariConsola {
          catch (System.Exception){ Console.WriteLine("\n--x-- Fin Listado Buses --x--\n"); }
          finally { file.Close(); }
       }
-
+    public void Asignadoaruta(string rutax){
+         Stream file = File.Open(nomArch, FileMode.OpenOrCreate);
+         BinaryReader read = new BinaryReader(file);
+         Console.WriteLine("LISTADO DE BUSES: \n");
+         try{
+            while (true) {
+               Bus lisBus = new Bus();
+               lisBus.RdBus(read);
+               if (lisBus.NomRuta==rutax) {
+               	lisBus.MostBus();
+               }
+            }
+         }
+         catch (System.Exception){ Console.WriteLine("\n--x-- Fin Listado Buses --x--\n"); }
+         finally { file.Close(); }
+      }
    }
 }
 
