@@ -41,7 +41,32 @@ namespace PumaKatariConsola {
          catch (System.Exception){ Console.WriteLine("\n--x-- Fin Listado Buses --x--\n"); }
          finally { file.Close(); }
       }
-
+    public void ReporteRutaMayorPasajeros() {
+    Stream file = File.Open(nomArch, FileMode.OpenOrCreate);
+    BinaryReader read = new BinaryReader(file);
+    string rutaMayorPasajeros = "";
+    int maxPasajeros = 0;
+    
+    try {
+        while (true) {
+            Bus lisBus = new Bus();
+            lisBus.RdBus(read);
+            
+            if (lisBus.NroPasajeros > maxPasajeros) {
+                maxPasajeros = lisBus.NroPasajeros;
+                rutaMayorPasajeros = lisBus.NomRuta;
+            }
+        }
+    }
+    catch (System.Exception) {
+        Console.WriteLine("\n--x-- Fin Listado Buses --x--\n");
+    }
+    finally {
+        file.Close();
+    }
+    
+    Console.WriteLine("Ruta con mayor cantidad de pasajeros: {0} (Cantidad: {1})", rutaMayorPasajeros, maxPasajeros);
+}
    }
 }
 
