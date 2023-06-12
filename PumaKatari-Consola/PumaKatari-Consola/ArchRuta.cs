@@ -41,5 +41,24 @@ namespace PumaKatariConsola {
          catch (System.Exception){ Console.WriteLine("\n--x-- Fin Listado Buses --x--\n"); }
          finally { file.Close(); }
       }
+      public void Mosttrarifa(){
+      	int c=0;
+         Stream file = File.Open(nomArch,FileMode.OpenOrCreate);
+         BinaryReader read = new BinaryReader(file);
+         Console.WriteLine("\n- LISTADO DEL REGISTRO DE RUTAS: ");
+         try{
+            while(true){
+               Ruta listRuta = new Ruta();
+               listRuta.ReadRuta(read);
+               if (listRuta.Tarifa()>0) {
+               	c=c+listRuta.Tarifa();
+               	Console.WriteLine("el total de la jornada es: "+c);
+               }
+               listRuta.MostRuta();
+            }
+         }
+         catch (System.Exception){ Console.WriteLine("\n--x-- Fin Listado Buses --x--\n"); }
+         finally { file.Close(); }
+      }
    }
 }
