@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PumaKatari"
         mc:Ignorable="d"
+        ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen"
         Title="PUMA KATARI DE LA PAZ" Height="600" Width="950" Icon="/log.png">
     <Border>

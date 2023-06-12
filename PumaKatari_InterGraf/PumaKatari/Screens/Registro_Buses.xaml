@@ -5,46 +5,249 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PumaKatari.Screens"
         mc:Ignorable="d"
-        Title="Registro_Buses" Height="400" Width="800">
-    <Grid Height="384" VerticalAlignment="Center" HorizontalAlignment="Left" Width="800">
-        <DataGrid x:Name="dgBuses" FrozenColumnCount="6" Margin="80,0,0,0" Width="500" HorizontalAlignment="Left" Height="264" VerticalAlignment="Center">
-            <DataGrid.Columns>
-                <DataGridTextColumn Width="80" Header="Placa" Binding="{Binding Placa}" />
-                <DataGridTextColumn Width="80" Header="ID Bus" Binding="{Binding Id}" />
-                <DataGridTextColumn Width="80" Header="ID Conductor" Binding="{Binding IdConductor}" />
-                <DataGridTextColumn Width="80" Header="ID Pers. Apoyo" Binding="{Binding IdPersApoyo}" />
-                <DataGridTextColumn Width="80" Header="Nombre Ruta" Binding="{Binding NomRuta}" />
-                <DataGridTextColumn Width="80" Header="Nro. Pasajeros" Binding="{Binding NroPasajeros}" />
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button x:Name="btnCrearReg" 
-                Content="CREAR" 
-                HorizontalAlignment="Left" 
-                Margin="625,99,0,0" 
-                VerticalAlignment="Top" 
-                Height="40" Width="115" 
-                Click="btnCrearReg_Click">
-        </Button>
-
-        <Button x:Name="btnAdicionar" 
-                Content="ADICIONAR" 
-                HorizontalAlignment="Left" 
-                Margin="625,164,0,0" 
-                VerticalAlignment="Top" 
-                Height="40" Width="115" 
-                Click="btnAdicionar_Click" >
-        </Button>
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
         
-        
-        <Button x:Name="btnClose" 
-                Content="SALIR" 
-                HorizontalAlignment="Left" 
-                Margin="625,239,0,0" 
-                VerticalAlignment="Top" 
-                Height="40" Width="115" 
-                Click="btnCLose_Click">
-        </Button>
+        Title="Registro_Buses" Height="500" Width="800">
+    <Border>
+        <Border.Background>
+            <ImageBrush ImageSource="/Screens/bgRegBuses.png"
+                        Stretch="Fill"
+                        AlignmentX="Center"
+                        AlignmentY="Center"
+                        />
+            
+        </Border.Background>
+
+        <Grid Margin="20,10,20,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid>
+                <TextBlock Text="R E G I S T R O   D E   B U S E S"
+                           Foreground="#282525"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           FontSize="30"
+                           FontFamily="Square721 BT"
+                           FontWeight="SemiBold"     
+                           Margin="100,0,0,0"
+                       >
+                    <TextBlock.Effect>
+                        <DropShadowEffect Color="Black"
+                                          Direction="270"                  
+                                          Opacity="0.5"
+                                          ShadowDepth="5"
+                                          BlurRadius="10"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+            <Grid Grid.Row="1">              
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="560"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0"
+                            HorizontalAlignment="Left">
+                    <DataGrid x:Name="dgBuses" Margin="0,5,0,0"
+                              CanUserResizeColumns="False"
+                              AutoGenerateColumns="False"
+                              HeadersVisibility="Column"
+                              Background="#AAf5f5f5"
+                              BorderBrush="#282525"
+                              BorderThickness="2"
+                              ColumnWidth="SizeToCells" 
+                              FontFamily="Square721 BT"
+                              FrozenColumnCount="6" 
+                              Height="350" Width="550">
+                        <DataGrid.Resources>
+                            <Style TargetType="{x:Type DataGridColumnHeader}" >
+                                <Setter Property="Background" Value="#282525" />
+                                <Setter Property="Foreground" Value="#F5F5F5" />
+                                <Setter Property="BorderBrush" Value="#F5F5F5" />
+                                <Setter Property="BorderThickness" Value="0,0,2,0" />
+                            </Style>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Style.Triggers >
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#AAf9b573" />
+                                        <Setter Property="Foreground" Value="#282525" />
+                                        <Setter Property="BorderBrush" Value="#F5F5F5" />
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+
+                        </DataGrid.Resources>
+
+                        <DataGrid.Columns >
+                            <DataGridTextColumn Header=" Placa"
+                                                    Width="85" 
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding Placa}" />
+
+                            <DataGridTextColumn Header=" ID Bus" 
+                                                    Width="85"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding Id}" />
+                            <DataGridTextColumn Header=" ID Conductor" 
+                                                    Width="95"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding IdConductor}" />
+                            <DataGridTextColumn Header=" ID Apoyo" 
+                                                    Width="85"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding IdPersApoyo}" />
+                            <DataGridTextColumn Header=" Nombre Ruta" 
+                                                    Width="90"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding NomRuta}" />
+                            <DataGridTextColumn Header=" Nro. Pasajeros" 
+                                                    Width="95"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding NroPasajeros}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+
+                <Grid Grid.Column="1">
 
 
-    </Grid>
+                    <StackPanel VerticalAlignment="Center" >
+                        <Button x:Name="btnCrear" 
+                            Content="C R E A R"
+                            Height="40" 
+                            Margin="0,20,0,20"
+                            Cursor="Hand"
+                            Foreground="#F5F5F5"
+                            FontFamily="Square721 BT"
+                            FontWeight="SemiBold"
+                            FontSize="12"                                                        
+                            HorizontalContentAlignment="Left"
+                            Click="btnCrear_Click">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="#282525"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#f9b573"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                            <Button.Effect>
+                                <DropShadowEffect 
+                            ShadowDepth="5"
+                            Direction="315"
+                            Opacity="0.4"
+                            Color="Black"
+                            />
+                            </Button.Effect>
+
+                        </Button>
+
+                        <Button x:Name="btnAdicionar" 
+                            Content="A D I C I O N A R"
+                            Height="40" 
+                            Margin="0,20,0,20"
+                            Cursor="Hand"
+                            Foreground="#F5F5F5"
+                            FontFamily="Square721 BT"
+                            FontWeight="SemiBold"
+                            FontSize="12"                                                        
+                            HorizontalContentAlignment="Left"
+                            Click="btnAdicionar_Click">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="#282525"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#f9b573"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                            <Button.Effect>
+                                <DropShadowEffect 
+                                    ShadowDepth="5"
+                                    Direction="315"
+                                    Opacity="0.4"
+                                    Color="Black"
+                                    />  
+                            </Button.Effect>
+
+                        </Button>
+
+                        <Button x:Name="btnSalir" 
+                            Content="S A L I R"
+                            Height="40" 
+                            Margin="0,20,0,20"
+                            Cursor="Hand"
+                            Foreground="#F5F5F5"
+                            FontFamily="Square721 BT"
+                            FontWeight="SemiBold"
+                            FontSize="12"                                                        
+                            HorizontalContentAlignment="Left"
+                            Click="btnCLose_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="#282525"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#f9b573"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                            <Button.Effect>
+                                <DropShadowEffect 
+                            ShadowDepth="5"
+                            Direction="315"
+                            Opacity="0.4"
+                            Color="Black"
+                            />
+                            </Button.Effect>
+                        </Button>
+
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+        </Grid>                
+    </Border>
 </Window>

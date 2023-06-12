@@ -10,19 +10,28 @@
   <ItemGroup>
     <None Remove="bgMain_PumaKatari.png" />
     <None Remove="log.png" />
+    <None Remove="Screens\bgBusesRutaX.png" />
+    <None Remove="Screens\bgRegBuses.png" />
+    <None Remove="Screens\buscar_icon.svg" />
     <None Remove="Screens\DataFill\bg.png" />
     <None Remove="Screens\DataFill\fechas.png" />
+    <None Remove="Screens\SearchIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Assets\" />
+    <Folder Include="img\" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="bgMain_PumaKatari.png" />
     <Resource Include="log.png" />
+    <Resource Include="Screens\bgBusesRutaX.png" />
+    <Resource Include="Screens\bgRegBuses.png" />
+    <Resource Include="Screens\buscar_icon.svg" />
     <Resource Include="Screens\DataFill\bg.png" />
     <Resource Include="Screens\DataFill\fechas.png" />
+    <Resource Include="Screens\SearchIcon.png" />
   </ItemGroup>
 
 </Project>

@@ -13,22 +13,44 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-namespace PumaKatari.Screen {
-    public partial class Registro_Buses : Window {
-        public ArchBus regBus = new ArchBus("RegistroBuses.dat");
-        public Registro_Buses() {
 
+namespace PumaKatari.Screens
+{
+    /// <summary>
+    /// Lógica de interacción para Registro_Buses.xaml
+    /// </summary>
+    public partial class Registro_Buses : Window
+    {
+        public ArchBus regBus = new ArchBus("RegistroBuses.dat");
+        public Registro_Buses()
+        {
             InitializeComponent();
             ActualizarArchivo();
+        }
+        
+        private void btnCrear_Click(object sender, RoutedEventArgs e)
+        {
+            regBus.CrearRegBus();
+            MessageBox.Show("Nuevo registro de Buses Creado");
 
         }
+        private void btnAdicionar_Click(object sender, RoutedEventArgs e)
+        {
+            Screens.DataFill.Datos_Bus datBus = new Screens.DataFill.Datos_Bus();
+            datBus.ShowDialog();
+            ActualizarArchivo();
+        }
+
         // El Metodo ActualizarArchivo sustituye al metodo Listar en la Clase ArchBus
-        private void ActualizarArchivo() { 
+        private void ActualizarArchivo()
+        {
             Stream file = File.Open("RegistroBuses.dat", FileMode.OpenOrCreate);
             BinaryReader read = new BinaryReader(file);
             List<Bus> listBus = new List<Bus>();
-            try {
-                while (true) {
+            try
+            {
+                while (true)
+                {
                     Bus buses = new Bus();
                     buses.RdBus(read);
                     listBus.Add(buses);
@@ -41,19 +63,12 @@ namespace PumaKatari.Screen {
             dgBuses.ItemsSource = listBus;
         }
 
-        private void btnCrearReg_Click(object sender, RoutedEventArgs e) {
-            regBus.CrearRegBus();
-            MessageBox.Show("Nuevo registro de Buses Creado");
-        }
 
-        private void btnAdicionar_Click(object sender, RoutedEventArgs e) {
-            Screens.DataFill.Datos_Bus datBus = new DataFill.Datos_Bus();
-            datBus.ShowDialog();
-            ActualizarArchivo();   
-        }
-
-        private void btnCLose_Click(object sender, RoutedEventArgs e) {
+        private void btnCLose_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
         }
+
+   
     }
 }

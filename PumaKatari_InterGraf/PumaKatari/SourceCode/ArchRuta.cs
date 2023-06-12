@@ -13,7 +13,7 @@ namespace PumaKatariConsola {
          Console.WriteLine("\n- REGISTRO DE RUTAS (Limite 7): ");
          try {         
             Ruta regRuta = new Ruta();
-            regRuta.LeerRuta();
+            //regRuta.LeerRuta();
             write.Seek(0,SeekOrigin.End);
             regRuta.WriteRuta(write);            
          }
